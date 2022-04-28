@@ -33,7 +33,7 @@ int g() {
  
 int32_t main() {
     int* t;
-    t = int g);
+    t = int g();
     output(t,7);
     
     //int m = mini(t,6);
