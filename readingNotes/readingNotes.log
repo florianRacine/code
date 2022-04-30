@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.4.12)  28 APR 2022 19:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.4.12)  30 APR 2022 13:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -142,23 +142,24 @@ File: l3backend-pdftex.def 2022-01-12 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count271
 \l__pdf_internal_box=\box54
 )
-No file readingNotes.aux.
+(./readingNotes.aux)
 \openout1 = `readingNotes.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -217,53 +218,272 @@ e
 ))
 \c@lstlisting=\count278
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 65.
+(Font)              <12> on input line 66.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 65.
+(Font)              <8> on input line 66.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 65.
+(Font)              <6> on input line 66.
 </home/evo/Pictures/logo//logo.png, id=1, 481.8pt x 269.50688pt>
 File: /home/evo/Pictures/logo//logo.png Graphic file (type png)
 <use /home/evo/Pictures/logo//logo.png>
 Package pdftex.def Info: /home/evo/Pictures/logo//logo.png  used on input line 
-72.
+73.
 (pdftex.def)             Requested size: 199.16928pt x 111.40735pt.
 
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} </home/evo/Pictures/logo//l
-ogo.png>]
-No file readingNotes.toc.
+ogo.png>] (./readingNotes.toc
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <10.95> on input line 2.
+)
 \tf@toc=\write3
 \openout3 = `readingNotes.toc'.
 
-[2]
-Overfull \hbox (20.19542pt too wide) in paragraph at lines 91--94
+ [2]
+Overfull \hbox (20.19542pt too wide) in paragraph at lines 92--95
 \T1/cmr/m/n/10.95 Cet ou-vrage sans équiv-a-lent, ex-haus-tif et d'accès facile
  est une in-tro-duc-tion com-plète à l'algorithmique
  []
 
-[3] (./readingNotes.aux) ) 
+
+Overfull \hbox (21.72754pt too wide) in paragraph at lines 98--106
+ \T1/cmr/bx/n/10.95 In-tro-duc-tion[] \T1/cmr/m/n/10.95 Cet al-go-rithme ap-pel
+é AL-GO-RITHME TRI RAPIDE(QuickSort) il s'agit d'ordonner
+ []
+
+<image//shemaTriRapide.png, id=18, 579.16376pt x 411.5375pt>
+File: image//shemaTriRapide.png Graphic file (type png)
+<use image//shemaTriRapide.png>
+Package pdftex.def Info: image//shemaTriRapide.png  used on input line 111.
+(pdftex.def)             Requested size: 364.19667pt x 258.78647pt.
+[3 <./image//shemaTriRapide.png>]
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2020/03/24 1.8d listings language file
+)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
+)
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 1
+18.
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
+File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+)
+
+! LaTeX Error: Invalid UTF-8 byte sequence (Ã\lst@FillFixed@).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.137 /* fonction qui permet Ã  
+                                l'operateur de saisir sa liste de nombres
+? R
+OK, entering \nonstopmode...
+
+! LaTeX Error: Invalid UTF-8 byte "A0.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.137 /* fonction qui permet Ã  
+                                l'operateur de saisir sa liste de nombres
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+
+! LaTeX Error: Invalid UTF-8 byte sequence (Ã\lst@FillFixed@).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.157 ... de placer le pivot (debut du tableau Ã  
+                                                  trier)
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+
+! LaTeX Error: Invalid UTF-8 byte "A0.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.157 ... de placer le pivot (debut du tableau Ã  
+                                                  trier)
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+
+! LaTeX Error: Invalid UTF-8 byte sequence (Ã\lst@FillFixed@).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.161  Ã  
+          la fin, la valeur pivot se trouve dans le tableau Ã  tab[pos]
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+
+! LaTeX Error: Invalid UTF-8 byte "A0.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.161  Ã  
+          la fin, la valeur pivot se trouve dans le tableau Ã  tab[pos]
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+
+! LaTeX Error: Invalid UTF-8 byte sequence (Ã\lst@FillFixed@).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.161 ...aleur pivot se trouve dans le tableau Ã  
+                                                  tab[pos]
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+
+! LaTeX Error: Invalid UTF-8 byte "A0.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.161 ...aleur pivot se trouve dans le tableau Ã  
+                                                  tab[pos]
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+
+! LaTeX Error: Invalid UTF-8 byte sequence (Ã\expandafter).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.174  sur le debut du tableau jusquÃ  
+                                       pos (exclu) : tab[pos-1]
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+
+! LaTeX Error: Invalid UTF-8 byte "A0.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.174  sur le debut du tableau jusquÃ  
+                                       pos (exclu) : tab[pos-1]
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+
+! LaTeX Error: Invalid UTF-8 byte sequence (Ã\lst@FillFixed@).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.178  sur la fin du tableau Ã  
+                                partir de la premiere valeur apres le pivot
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+
+! LaTeX Error: Invalid UTF-8 byte "A0.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.178  sur la fin du tableau Ã  
+                                partir de la premiere valeur apres le pivot
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+[4] (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2020/03/24 1.8d listings language file
+)
+<image//graphTriComptage.png, id=31, 589.20125pt x 245.91875pt>
+File: image//graphTriComptage.png Graphic file (type png)
+<use image//graphTriComptage.png>
+Package pdftex.def Info: image//graphTriComptage.png  used on input line 230.
+(pdftex.def)             Requested size: 364.19667pt x 152.01024pt.
+<image//graphTriBase.png, id=32, 640.3925pt x 411.5375pt>
+File: image//graphTriBase.png Graphic file (type png)
+<use image//graphTriBase.png>
+Package pdftex.def Info: image//graphTriBase.png  used on input line 239.
+(pdftex.def)             Requested size: 364.19667pt x 234.04504pt.
+ [5 <./image//graphTriComptage.png>] [6 <./image//graphTriBase.png>] (./reading
+Notes.aux) ) 
 Here is how much of TeX's memory you used:
- 4149 strings out of 480247
- 61623 string characters out of 5896151
- 355250 words of memory out of 5000000
- 22076 multiletter control sequences out of 15000+600000
- 479248 words of font info for 47 fonts, out of 8000000 for 9000
+ 4705 strings out of 480247
+ 68231 string characters out of 5896151
+ 852339 words of memory out of 5000000
+ 22611 multiletter control sequences out of 15000+600000
+ 482022 words of font info for 53 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 55i,6n,62p,320b,262s stack positions out of 5000i,500n,10000p,200000b,80000s
- </home/evo/.texlive2021/texmf-var/fonts/pk/ljfour/jk
-nappen/ec/ecbx1095.600pk> </home/evo/.texlive2021/texmf-var/fonts/pk/ljfour/jkn
-appen/ec/ecbx1200.600pk> </home/evo/.texlive2021/texmf-var/fonts/pk/ljfour/jkna
-ppen/ec/ecbx1440.600pk> </home/evo/.texlive2021/texmf-var/fonts/pk/ljfour/jknap
-pen/ec/ecrm1095.600pk> </home/evo/.texlive2021/texmf-var/fonts/pk/ljfour/jknapp
-en/ec/ecbx2074.600pk> </home/evo/.texlive2021/texmf-var/fonts/pk/ljfour/jknappe
-n/ec/ecrm1200.600pk> </home/evo/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen
-/ec/ecrm1728.600pk>
-Output written on readingNotes.pdf (3 pages, 64991 bytes).
+ 55i,7n,62p,372b,1261s stack positions out of 5000i,500n,10000p,200000b,80000s
+ </home/evo/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt
+0900.600pk> </home/evo/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0
+600.600pk> </home/evo/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx12
+00.600pk> </home/evo/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx109
+5.600pk> </home/evo/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440
+.600pk> </home/evo/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1095.
+600pk> </home/evo/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx2074.6
+00pk> </home/evo/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.60
+0pk> </home/evo/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1728.600
+pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb>
+Output written on readingNotes.pdf (6 pages, 220588 bytes).
 PDF statistics:
- 173 PDF objects out of 1000 (max. 8388607)
- 37 compressed objects within 1 object stream
+ 326 PDF objects out of 1000 (max. 8388607)
+ 57 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
