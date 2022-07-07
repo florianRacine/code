@@ -4,5 +4,7 @@ using namespace std;
 typedef long long ll;
  
 int32_t main() {
-    cout << 3/2;
+    string test;
+    test = "1+2+3";
+    cout << test [1];
 }

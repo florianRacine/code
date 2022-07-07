@@ -1,0 +1,174 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.5.18)  6 JUL 2022 17:20
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**boyOrGir.cpp
+(./boyOrGir.cpp
+LaTeX2e <2021-11-15> patch level 1
+L3 programming layer <2022-01-21>
+! You can't use `macro parameter character #' in vertical mode.
+l.1 #
+     include <bits/stdc++.h>
+? 
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 #i
+      nclude <bits/stdc++.h>
+? 
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no < in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no / in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no + in font nullfont!
+Missing character: There is no + in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no > in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 1--2
+[]
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3 u
+     sing namespace std;
+? 
+Missing character: There is no u in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no ; in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 3--5
+[]
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 i
+     nt32_t main() {
+? q
+OK, entering \batchmode...
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no 2 in font nullfont!
+! Missing $ inserted.
+<inserted text> 
+                $
+l.6 int32_
+          t main() {
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 6.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 6.
+! Missing $ inserted.
+<inserted text> 
+                $
+l.10 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.10 
+     
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+Overfull \hbox (443.09596pt too wide) in paragraph at lines 6--10
+[]$[]\OML/cmm/m/it/10 main\OT1/cmr/m/n/10 ()[]$ 
+ []
+
+! Too many }'s.
+l.11 }
+      
+You've closed more groups than you opened.
+Such booboos are generally harmless, so keep going.
+
+)
+! Emergency stop.
+<*> boyOrGir.cpp
+                
+*** (job aborted, no legal \end found)
+
+ 
+Here is how much of TeX's memory you used:
+ 19 strings out of 480247
+ 434 string characters out of 5896151
+ 283961 words of memory out of 5000000
+ 18062 multiletter control sequences out of 15000+600000
+ 469259 words of font info for 28 fonts, out of 8000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 18i,2n,12p,74b,56s stack positions out of 5000i,500n,10000p,200000b,80000s
+!  ==> Fatal error occurred, no output PDF file produced!
