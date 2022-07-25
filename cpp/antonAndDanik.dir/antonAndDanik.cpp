@@ -15,6 +15,7 @@ int32_t main() {
             countWinAnton++;
         }
     }
+
     if (countWinAnton > (int) games.size() - countWinAnton) {
         cout << "Anton";
     } else if (countWinAnton < (int) games.size() - countWinAnton) {
@@ -22,5 +23,6 @@ int32_t main() {
     } else {
         cout << "Friendship";
     } 
+
     return 0;
 }

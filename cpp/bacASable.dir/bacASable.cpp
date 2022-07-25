@@ -1,31 +1,30 @@
 #include <bits/stdc++.h>
- 
+
 using namespace std;
-typedef long long ll;
 
-class Vehicule {
+class Complex {
     public:
-        Vehicule(int a) {
-            cout << "Constructor" << endl;
-            countWheel = a;
+        Complex(float x, float y) {
+            this->a=x;
+            this->b=y;
         }
-        void getCountWheel() {
-            cout << countWheel << endl;
+        int getReel() {
+            return a;
         }
-    protected:
-        int countWheel;
+        int getIm() {
+            return b;
+        }
+        int mod() {
+            float z;
+            z = pow(pow(a,2)+pow(b,2),1/2);
+            return z;
+        }
+    private:
+        float a, b;
 };
 
-class Voiture : public Vehicule {
-    public:
-        int name;
-    
-};
- 
-int32_t main() {
-    int a =4;
-    Voiture ob(a);
-    
-
-    
+int main() {
+    Complex z(1,2);
+    cout << z.mod() << endl;
+    return 0;
 }
