@@ -1,30 +1,36 @@
+#ifdef ONPC
+    #define _GLIBCXX_DEBUG
+#endif
 #include <bits/stdc++.h>
-
+#define sz(a) ((int)((a).size()))
+#define char unsigned char
+ 
 using namespace std;
-
-class Complex {
-    public:
-        Complex(float x, float y) {
-            this->a=x;
-            this->b=y;
-        }
-        int getReel() {
-            return a;
-        }
-        int getIm() {
-            return b;
-        }
-        int mod() {
-            float z;
-            z = pow(pow(a,2)+pow(b,2),1/2);
-            return z;
-        }
-    private:
-        float a, b;
-};
-
-int main() {
-    Complex z(1,2);
-    cout << z.mod() << endl;
+// mt19937 rnd(239);
+mt19937 rnd(chrono::steady_clock::now().time_since_epoch().count());
+ 
+typedef long long ll;
+typedef long double ld;
+ 
+int solve() {
+    
     return 0;
+}
+ 
+int32_t main() {
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    int TET = 1e9;
+    //cin >> TET;
+    for (int i = 1; i <= TET; i++) {
+        if (solve()) {
+            break;
+        }
+        #ifdef ONPC
+            cout << "__________________________" << endl;
+        #endif
+    }
+    #ifdef ONPC
+        cerr << endl << "finished in " << clock() * 1.0 / CLOCKS_PER_SEC << " sec" << endl;
+    #endif
 }
