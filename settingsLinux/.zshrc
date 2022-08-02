@@ -107,6 +107,7 @@ tmux
 autoload -U compinit
 compinit
 
+alias npcpp='bash /home/evo/Documents/code/cpp/np.sh'
 
 # Les alias marchent comme sous bash
 alias ls='ls --color=auto'

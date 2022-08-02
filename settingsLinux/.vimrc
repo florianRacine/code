@@ -169,6 +169,9 @@ nnoremap <C-L> :nohl<CR><C-L>
 noremap <F1> <ESC> :w <CR> :!clear <CR> :!pdflatex % <CR>
 inoremap <F1> <ESC> :w <CR> :!clear <CR>:!pdflatex % <CR>
 
+noremap <F8> <ESC> :w <CR> :!clear <CR> :!g++ -fsanitize=address -std=c++17 -DONPC -O2 -o %< % && ./%< < inp<CR>
+inoremap <F8> <ESC> :w <CR> :!clear <CR> :!g++ -fsanitize=address -std=c++17 -DONPC -O2 -o "%<" "%" && "./%<" < inp<CR>
+
 noremap <F9> <ESC> :w <CR> :!clear <CR> :!g++ -fsanitize=address -std=c++17 -Wall -Wextra -Wshadow -DONPC -O2 -o %< % && ./%< <CR>
 inoremap <F9> <ESC> :w <CR> :!clear <CR>:!g++ -fsanitize=address -std=c++17 -Wall -Wextra -Wshadow -DONPC -O2 -o %< % && ./%< <CR>
  

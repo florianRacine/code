@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =4
+let g:netrw_dirhist_4='/home/evo/Documents/code/cpp/bacASable.dir'
+let g:netrw_dirhist_3='/home/evo/Documents/code/cpp/pointer.dir'
+let g:netrw_dirhist_2='/home/evo/Documents/code/cpp/sum3input.dir'
+let g:netrw_dirhist_1='/home/evo/Documents/code/cpp/intToChar.dir'
+let g:netrw_dirhist_0='/home/evo/Documents/code/cpp/maxList.dir'
+let g:netrw_dirhist_9='/home/evo/Documents/code/cpp'
+let g:netrw_dirhist_8='/home/evo/Documents/code'
+let g:netrw_dirhist_7='/home/evo/Documents'
+let g:netrw_dirhist_6='/home/evo/Documents/alternanceRecherche'
+let g:netrw_dirhist_5='/home/evo/Documents/alternanceRecherche/fr-basic-examples-algo'
