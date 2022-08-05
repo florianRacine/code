@@ -3,32 +3,40 @@
 using namespace std;
 typedef long long ll;
  
-int32_t main() {
-    //Length, sum of digits
+int main() {
     int m, s; cin >> m >> s;
     string min, max;
-    int n=s/9;
-
-    //Min
-    if (m*9>=s && not(m>1 && s==0)) {
-        if (((s/9)+1<m || ((s/9)<m && s%9==0)) && s!=0) {
-            min += "1";
-            for (int i=0; i<m-(n+1)-1; i++) min+="0";
+    int sMax=s;
+    int x=9;
+    if (s>m*9 || (s==0 && m>1)) {
+        cout << "-1 -1";
+        return 0;
+    } else if (s==0 && m==1) {
+        cout << "0 0";
+        return 0;
+    }
+    while (sMax>0) {
+        if (sMax-x>=0) {
+            if (x!=0) max+= '0'+x;
+            sMax-=x;
+        } else {
+            x--;
         }
-
-
-        if (s%9 && (s/9)+1<m) min += to_string(s%9-1);
-        else if (s%9 && (s/9)+1==m) min += to_string(s%9);
-        else if (s%9==0 && m>=2 && s!=0) n--,min += "8";
-        for (int i=0; i<n; i++) min += '9';
-        if (min.size()==0) min += '0';
-    } else min="-1";
-
-    //Max
-    
-    if (m*9>=s && not(m>1 && s==0)) {
-        
-    } else max="-1";
-    
+    }
+    min = max;
+    if ((int) min.size() < m) {
+        min[(int) min.size()-1]= (char) min[(int) min.size()-1]-1;
+        int suf = (int) min.size();
+        for (int i=0; i<m-suf-1; i++) {
+            min+= '0';
+        }
+        if ((int) min.size() < m) min += '1';
+    }
+    reverse(min.begin(), min.end());
+    int suf = (int) max.size();
+    for (int i=0; i<m-suf; i++) {
+        max+= '0';
+    }
     cout << min << " " << max;
+    return 0;
 }
