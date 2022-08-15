@@ -6,10 +6,8 @@ typedef long long ll;
 int32_t main() {
     int t; cin >> t;
     for (int i=0; i<t; ++i) {
-
         int n, m; cin >> n >> m;
         string a, b; cin >> a >> b;
-
         while (a.size()>b.size()) {
             if (b[0]=='0' && a[0]=='0' && a[1]=='1') {
                 a=a.substr(1,a.size()-1);
