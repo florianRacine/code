@@ -6,5 +6,5 @@ Structure:
 Projects.dir/inp //Inputs example
 Projects.dir/project.cpp //Solution
 Projects.dir/project //Solution compiled
-Projects.dir/project.cpp //Solution corrected
-Projects.dir/project //Solution compiled and corrected
+Projects.dir/projectCorrection.cpp //Solution corrected
+Projects.dir/projectCorrection //Solution compiled and corrected
