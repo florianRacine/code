@@ -1,15 +1,5 @@
-" URL: https://vim.wikia.com/wiki/Example_vimrc
-" Authors: https://vim.wikia.com/wiki/Vim_on_Libera_Chat
-" Description: A minimal, but feature rich, example .vimrc. If you are a
-"              newbie, basing your first .vimrc on this file is a good choice.
-"              If you're a more advanced user, building your own .vimrc based
-"              on this file is still a good idea.
-
-"------------------------------------------------------------
-" Features {{{1
-"
-" These options and commands enable some very useful features in Vim, that
-" no user should have to live without.
+"==============================================================================
+" Features 1
 
 " Set 'nocompatible' to ward off unexpected things that your distro might
 " have made, as well as sanely reset options when re-sourcing .vimrc
@@ -22,32 +12,19 @@ if has('filetype')
   filetype indent plugin on
 endif
 
-" Enable syntax highlighting
-if has('syntax')
-  syntax on
-endif
+"==============================================================================
+" Must have options 2
 
-"------------------------------------------------------------
-" Must have options {{{1
-"
-" These are highly recommended options.
-
-" Vim with default settings does not allow easy switching between multiple files
-" in the same editor window. Users can use multiple split windows or multiple
-" tab pages to edit multiple files, but it is still best to enable an option to
-" allow easier switching between files.
-"
-" One such option is the 'hidden' option, which allows you to re-use the same
-" window and switch from an unsaved buffer without saving it first. Also allows
-" you to keep an undo history for multiple files when re-using the same window
-" in this way. Note that using persistent undo also lets you undo in multiple
-" files even in the same window, but is less efficient and is actually designed
-" for keeping undo history after closing Vim entirely. Vim will complain if you
-" try to quit without saving, and swap files will keep you safe if your computer
+" The 'hidden' option, which allows you to re-use the same window and switch
+" from an unsaved buffer without saving it first. Also allows you to keep an
+" undo history for multiple files when re-using the same window in this way.
+" Note that using persistent undo also lets you undo in multiple files even in
+" the same window, but is less efficient and is actually designed for keeping
+" undo history after closing Vim entirely. Vim will complain if you try to
+" quit without saving, and swap files will keep you safe if your computer
 " crashes.
 set hidden
 
-" Note that not everyone likes working this way (with the hidden option).
 " Alternatives include using tabs or split windows instead of re-using the same
 " window as mentioned above, and/or either of the following options:
 " set confirm
@@ -59,27 +36,21 @@ set wildmenu
 " Show partial commands in the last line of the screen
 set showcmd
 
-" Highlight searches (use <C-L> to temporarily turn off highlighting; see the
-" mapping of <C-L> below)
-set hlsearch
+set noswapfile
+set nobackup
 
-" Modelines have historically been a source of security vulnerabilities. As
-" such, it may be a good idea to disable them and use the securemodelines
-" script, <http://www.vim.org/scripts/script.php?script_id=1876>.
-" set nomodeline
-
-
-"------------------------------------------------------------
-" Usability options {{{1
-"
-" These are options that users frequently set in their .vimrc. Some of them
-" change Vim's behaviour in ways which deviate from the true Vi way, but
-" which are considered to add usability. Which, if any, of these options to
-" use is very much a personal preference, but they are harmless.
+"==============================================================================
+" Usability options 3
 
 " Use case insensitive search, except when using capital letters
 set ignorecase
 set smartcase
+
+" Highlight the search
+set hlsearch
+
+" The cursor don't have to go to the edge of the file to start scroll
+set scrolloff=8
 
 " Allow backspacing over autoindent, line breaks and start of insert action
 set backspace=indent,eol,start
@@ -120,20 +91,21 @@ endif
 " Set the command window height to 2 lines, to avoid many cases of having to
 " "press <Enter> to continue"
 set cmdheight=2
+set colorcolumn=80
+set signcolumn=yes
 
 " Display line numbers on the left
 set number
 set relativenumber
 
+" Highlight the current line
+set cursorline
+
 " Quickly time out on keycodes, but never time out on mappings
 set notimeout ttimeout ttimeoutlen=200
 
-" Use <F11> to toggle between 'paste' and 'nopaste'
-set pastetoggle=<F11>
-
-
-"------------------------------------------------------------
-" Indentation options {{{1
+"==============================================================================
+" Indentation options 4
 "
 " Indentation settings according to personal preference.
 
@@ -148,9 +120,11 @@ set expandtab
 "set shiftwidth=4
 "set tabstop=4
 
+set completeopt=menuone,noinsert,noselect
 
-"------------------------------------------------------------
-" Mappings {{{1
+:set list lcs=tab:\|\ 
+"==============================================================================
+" Mappings 5
 "
 " Useful mappings
 
@@ -158,19 +132,26 @@ set expandtab
 " which is the default
 map Y y$
 
+map <space> <Leader>
+
 " Map <C-L> (redraw screen) to also turn off search highlighting until the
 " next search
 nnoremap <C-L> :nohl<CR><C-L>
 
-"------------------------------------------------------------
-" Short cut c ++
+" Open new file
+inoremap <c-b> <Esc>:Lex<cr>:vertical resize 40<cr>
+nnoremap <c-b> <Esc>:Lex<cr>:vertical resize 40<cr>
 
+imap jk <Esc>
+
+"==============================================================================
+" Short cut 6
 
 noremap <F1> <ESC> :w <CR> :!clear <CR> :!pdflatex % <CR>
 inoremap <F1> <ESC> :w <CR> :!clear <CR>:!pdflatex % <CR>
 
-noremap <F8> <ESC> :w <CR> :!clear <CR> :!g++ -fsanitize=address -std=c++17 -DONPC -O2 -o %< % && ./%< < inp<CR>
-inoremap <F8> <ESC> :w <CR> :!clear <CR> :!g++ -fsanitize=address -std=c++17 -DONPC -O2 -o "%<" "%" && "./%<" < inp<CR>
+noremap <F8> <ESC> :w <CR> :!clear <CR> :!g++ -fsanitize=address -std=c++17 -O2 -o %< % && ./%< < inp<CR>
+inoremap <F8> <ESC> :w <CR> :!clear <CR> :!g++ -fsanitize=address -std=c++17 -O2 -o "%<" "%" && "./%<" < inp<CR>
 
 noremap <F9> <ESC> :w <CR> :!clear <CR> :!g++ -fsanitize=address -std=c++17 -Wall -Wextra -Wshadow -DONPC -O2 -o %< % && ./%< <CR>
 inoremap <F9> <ESC> :w <CR> :!clear <CR>:!g++ -fsanitize=address -std=c++17 -Wall -Wextra -Wshadow -DONPC -O2 -o %< % && ./%< <CR>
@@ -178,29 +159,52 @@ inoremap <F9> <ESC> :w <CR> :!clear <CR>:!g++ -fsanitize=address -std=c++17 -Wal
 noremap <F10> <ESC> :w <CR> :!clear <CR> :!g++ -fsanitize=address -std=c++17 -Wall -Wextra -Wshadow -DONPC -O2 -o %< % && ./%< < inp<CR>
 inoremap <F10> <ESC> :w <CR> :!clear <CR>:!g++ -fsanitize=address -std=c++17 -Wall -Wextra -Wshadow -DONPC -O2 -o "%<" "%" && "./%<" < inp<CR>
 
+"==============================================================================
+" Plugin 7
+
 call plug#begin('~/.vim/plugged')
 
-
+"Plugin for autocompletion
 Plug 'sirver/ultisnips'
+Plug 'honza/vim-snippets'
+
+"Plugin for highlighted yank
+Plug 'machakann/vim-highlightedyank'
+
+"Plugin for latex
+Plug 'lervag/vimtex'
+
+"Plugin for style
+Plug 'morhetz/gruvbox'
+Plug 'crusoexia/vim-monokai'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+
+" Plugin displaying thin vertical lines at each indentation level for code
+Plug 'Yggdroot/indentLine'
+
+"Plugin for smooth scroll
+Plug 'psliwka/vim-smoothie'
+
+"Plugin for commenter
+Plug 'preservim/nerdcommenter'
+
+"==============================================================================
+" Configuration plugin 8
+
+set conceallevel=1
+let g:highlightedyank_highlight_duration = 80
+let g:tex_conceal='abdmg' 
+let g:tex_flavor='latex'
+let g:vimtex_view_method='general'
+let g:vimtex_quickfix_mode=0
 let g:UltiSnipsExpandTrigger = '<tab>'
 let g:UltiSnipsJumpForwardTrigger = '<tab>'
 let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
-"let g:UltiSnipsJumpForwardTrigger="<c-b>"
-"let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-"let g:UltiSnipsEditSplit="vertical"
- 
-Plug 'honza/vim-snippets'
-
-" Plug 'lervag/vimtex'
-" let g:tex_flavor='latex'
-" let g:vimtex_view_method='general'
-" let g:vimtex_quickfix_mode=0
-" set conceallevel=1
-" let g:tex_conceal='abdmg' 
-  
-"Plug 'gilligan/vim-lldb'
-
+let g:indentLine_char = '|'
 
 call plug#end()
 ":PlugInstall
-"
+
+colorscheme monokai
+

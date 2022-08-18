@@ -1,8 +1,9 @@
-#include <iostream>
-
+#include <bits/stdc++.h>
+ 
 using namespace std;
+typedef long long ll;
 
 int main() {
-    cout << "Hello world!";
+    cout << (int) 'a' << " = " << 97 << endl;
     return 0;
 }
