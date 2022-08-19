@@ -122,7 +122,6 @@ set expandtab
 
 set completeopt=menuone,noinsert,noselect
 
-:set list lcs=tab:\|\ 
 "==============================================================================
 " Mappings 5
 "
@@ -179,6 +178,7 @@ Plug 'morhetz/gruvbox'
 Plug 'crusoexia/vim-monokai'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'octol/vim-cpp-enhanced-highlight'
 
 " Plugin displaying thin vertical lines at each indentation level for code
 Plug 'Yggdroot/indentLine'
@@ -193,18 +193,18 @@ Plug 'preservim/nerdcommenter'
 " Configuration plugin 8
 
 set conceallevel=1
-let g:highlightedyank_highlight_duration = 80
+let g:highlightedyank_highlight_duration=80
 let g:tex_conceal='abdmg' 
 let g:tex_flavor='latex'
 let g:vimtex_view_method='general'
 let g:vimtex_quickfix_mode=0
-let g:UltiSnipsExpandTrigger = '<tab>'
-let g:UltiSnipsJumpForwardTrigger = '<tab>'
-let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
-let g:indentLine_char = '|'
+let g:UltiSnipsExpandTrigger ='<tab>'
+let g:UltiSnipsJumpForwardTrigger ='<tab>'
+let g:UltiSnipsJumpBackwardTrigger ='<s-tab>'
+let g:indentLine_fileType=['c','py','cpp']
+let g:indentLine_char='|'
 
 call plug#end()
 ":PlugInstall
 
 colorscheme monokai
-
