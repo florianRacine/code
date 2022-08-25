@@ -4,6 +4,18 @@
 using namespace std;
 typedef long long ll;
 
+/*
+ *int countingLettersFund(vector<bool> vec);
+ *int isWordFind (string wordToFind, vector<bool> lettersFound);
+ *void printStartGame();
+ *void printAskLetterGuess();
+ *void printScore(int score, string wordToFind);
+ *void printWordWithLettersFound(string wordToFind, vector<bool> lettersFound);
+ *vector<bool> setLetterFind(char letter, string wordToFind, vector<bool> lettersFound);
+ *string setWordToFind();
+ *char gtLetterGuess();
+ */
+
 int main() {
     // Initialisation
     string wordToFind = setWordToFind();

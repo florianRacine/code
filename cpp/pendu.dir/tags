@@ -1,0 +1,20 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_EXCMD	mixed	/number, pattern, mixed, or combineV2/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/
+!_TAG_PROC_CWD	/home/evo/Documents/code/cpp/pendu.dir/	//
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	5.9.0	//
+countingLettersFund	pendu.h	/^int countingLettersFund(vector<bool> vec) {$/;"	f	typeref:typename:int
+getLetterGuess	pendu.h	/^char getLetterGuess() {$/;"	f	typeref:typename:char
+isWordFind	pendu.h	/^int isWordFind (string wordToFind, vector<bool> lettersFound) {$/;"	f	typeref:typename:int
+printAskLetterGuess	pendu.h	/^void printAskLetterGuess() {$/;"	f	typeref:typename:void
+printScore	pendu.h	/^void printScore(int score, string wordToFind) {$/;"	f	typeref:typename:void
+printStartGame	pendu.h	/^void printStartGame() {$/;"	f	typeref:typename:void
+printWordWithLettersFound	pendu.h	/^void printWordWithLettersFound(string wordToFind, vector<bool> lettersFound) {$/;"	f	typeref:typename:void
+setLetterFind	pendu.h	/^vector<bool> setLetterFind(char letter, string wordToFind, vector<bool> lettersFound) {$/;"	f	typeref:typename:vector<bool>
+setWordToFind	pendu.h	/^string setWordToFind() {$/;"	f	typeref:typename:string

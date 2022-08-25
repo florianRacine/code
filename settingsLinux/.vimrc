@@ -50,7 +50,7 @@ set smartcase
 set hlsearch
 
 " The cursor don't have to go to the edge of the file to start scroll
-set scrolloff=8
+"set scrolloff=8
 
 " Allow backspacing over autoindent, line breaks and start of insert action
 set backspace=indent,eol,start
@@ -91,7 +91,7 @@ endif
 " Set the command window height to 2 lines, to avoid many cases of having to
 " "press <Enter> to continue"
 set cmdheight=2
-set colorcolumn=80
+set colorcolumn=85
 set signcolumn=yes
 
 " Display line numbers on the left
@@ -133,6 +133,8 @@ map Y y$
 
 map <space> <Leader>
 
+map <leader>q :bp<bar>sp<bar>bn<bar>bd<CR>
+
 " Map <C-L> (redraw screen) to also turn off search highlighting until the
 " next search
 nnoremap <C-L> :nohl<CR><C-L>
@@ -146,9 +148,15 @@ imap jk <Esc>
 "==============================================================================
 " Short cut 6
 
+" Latex
 noremap <F1> <ESC> :w <CR> :!clear <CR> :!pdflatex % <CR>
 inoremap <F1> <ESC> :w <CR> :!clear <CR>:!pdflatex % <CR>
 
+" Python
+noremap <F2> <ESC> :w <CR> :!clear <CR> :!python3 % <CR>
+inoremap <F2> <ESC> :w <CR> :!clear <CR>:!python3 % <CR>
+
+" C++
 noremap <F8> <ESC> :w <CR> :!clear <CR> :!g++ -fsanitize=address -std=c++17 -O2 -o %< % && ./%< < inp<CR>
 inoremap <F8> <ESC> :w <CR> :!clear <CR> :!g++ -fsanitize=address -std=c++17 -O2 -o "%<" "%" && "./%<" < inp<CR>
 
@@ -202,7 +210,7 @@ let g:UltiSnipsExpandTrigger ='<tab>'
 let g:UltiSnipsJumpForwardTrigger ='<tab>'
 let g:UltiSnipsJumpBackwardTrigger ='<s-tab>'
 let g:indentLine_fileType=['c','py','cpp']
-let g:indentLine_char='|'
+let g:indentLine_char='│'
 
 call plug#end()
 ":PlugInstall
