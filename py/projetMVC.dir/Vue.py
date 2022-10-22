@@ -95,8 +95,6 @@ def afficherEquipements():
         row += 1
     return None
 
-   
-
 def actions():
     row = app.getRow()
     count = row
@@ -141,8 +139,6 @@ def updateWidgets():
         app.setLabelAlign(équipement + "1", "left")
         row += 1
     return None
-
-
 
 app = gui()
 liste_animaux = ['Tic', 'Tac', 'Totoro', 'Patrick', 'Pocahontas']

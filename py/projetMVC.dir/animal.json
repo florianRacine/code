@@ -2,8 +2,8 @@
     "Tic": {
         "RACE": "tamia",
         "TYPE": "rongeur",
-        "ETAT": "repus",
-        "LIEU": "mangeoire"
+        "ETAT": "affam\u00e9",
+        "LIEU": "liti\u00e8re"
     },
     "Tac": {
         "RACE": "tamia",

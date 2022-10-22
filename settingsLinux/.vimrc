@@ -186,7 +186,7 @@ Plug 'morhetz/gruvbox'
 Plug 'crusoexia/vim-monokai'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'octol/vim-cpp-enhanced-highlight'
+"Plug 'octol/vim-cpp-enhanced-highlight'
 
 " Plugin displaying thin vertical lines at each indentation level for code
 Plug 'Yggdroot/indentLine'
@@ -209,7 +209,7 @@ let g:vimtex_quickfix_mode=0
 let g:UltiSnipsExpandTrigger ='<tab>'
 let g:UltiSnipsJumpForwardTrigger ='<tab>'
 let g:UltiSnipsJumpBackwardTrigger ='<s-tab>'
-let g:indentLine_fileType=['c','py','cpp']
+let g:indentLine_fileType=[]
 let g:indentLine_char='│'
 
 call plug#end()
