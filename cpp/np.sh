@@ -15,4 +15,4 @@ echo "    return 0;" >> $1.cpp
 echo "}" >> $1.cpp
 
 xclip -selection clipboard -o >> inp
-vim +10 -c 'startinsert!' $1.cpp
+vim -O +10 -c 'startinsert!' $1.cpp inp -c ":vertical resize 120"
