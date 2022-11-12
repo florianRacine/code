@@ -140,10 +140,25 @@ map <leader>q :bp<bar>sp<bar>bn<bar>bd<CR>
 nnoremap <C-L> :nohl<CR><C-L>
 
 " Open new file
-inoremap <c-b> <Esc>:Lex<cr>:vertical resize 40<cr>
-nnoremap <c-b> <Esc>:Lex<cr>:vertical resize 40<cr>
+" With ex
+"inoremap <c-b> <Esc>:Lex<cr>:vertical resize 40<cr>
+"nnoremap <c-b> <Esc>:Lex<cr>:vertical resize 40<cr>
 
-imap jk <Esc>
+" With fzf
+inoremap <c-b> :Buffers<cr>
+nnoremap <c-b> :Buffers<cr>
+
+inoremap <c-t> :Files<cr>
+nnoremap <c-t> :Files<cr>
+
+inoremap <c-m> :Marks<cr>
+nnoremap <c-m> :Marks<cr>
+
+" Add new line without leaving the Normal mode
+nnoremap <Leader>o o<Esc>0"_Dk
+nnoremap <Leader>O O<Esc>0"_Dj
+
+" imap jk <Esc>
 
 "==============================================================================
 " Short cut 6
@@ -186,7 +201,6 @@ Plug 'morhetz/gruvbox'
 Plug 'crusoexia/vim-monokai'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-"Plug 'octol/vim-cpp-enhanced-highlight'
 
 " Plugin displaying thin vertical lines at each indentation level for code
 Plug 'Yggdroot/indentLine'
@@ -197,18 +211,29 @@ Plug 'psliwka/vim-smoothie'
 "Plugin for commenter
 Plug 'preservim/nerdcommenter'
 
+"Plugin for more actions
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-repeat'
+
+"Plugin explorer
+Plug 'junegunn/fzf.vim'
+
 "==============================================================================
 " Configuration plugin 8
 
 set conceallevel=1
 let g:highlightedyank_highlight_duration=80
+
 let g:tex_conceal='abdmg' 
 let g:tex_flavor='latex'
+
 let g:vimtex_view_method='general'
 let g:vimtex_quickfix_mode=0
+
 let g:UltiSnipsExpandTrigger ='<tab>'
 let g:UltiSnipsJumpForwardTrigger ='<tab>'
 let g:UltiSnipsJumpBackwardTrigger ='<s-tab>'
+
 let g:indentLine_fileType=[]
 let g:indentLine_char='│'
 
