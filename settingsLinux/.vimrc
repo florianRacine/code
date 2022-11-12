@@ -145,18 +145,16 @@ nnoremap <C-L> :nohl<CR><C-L>
 "nnoremap <c-b> <Esc>:Lex<cr>:vertical resize 40<cr>
 
 " With fzf
-inoremap <c-b> :Buffers<cr>
-nnoremap <c-b> :Buffers<cr>
+inoremap <Leader>b <Esc>:Buffers<cr>
+nnoremap <Leader>b <Esc>:Buffers<cr>
 
-inoremap <c-t> :Files<cr>
-nnoremap <c-t> :Files<cr>
+inoremap <Leader>f <Esc>:Files<cr>
+nnoremap <Leader>f <Esc>:Files<cr>
 
-inoremap <c-m> :Marks<cr>
-nnoremap <c-m> :Marks<cr>
+inoremap <Leader>m <Esc>:Marks<cr>
+nnoremap <Leader>m <Esc>:Marks<cr>
 
 " Add new line without leaving the Normal mode
-nnoremap <Leader>o o<Esc>0"_Dk
-nnoremap <Leader>O O<Esc>0"_Dj
 
 " imap jk <Esc>
 
