@@ -39,6 +39,8 @@ set showcmd
 set noswapfile
 set nobackup
 
+set updatetime=100
+
 "==============================================================================
 " Usability options 3
 
@@ -201,6 +203,7 @@ Plug 'luochen1990/rainbow' "Rainbow Bracket
 Plug 'Yggdroot/indentLine' "Displaying vertical lines at each indentation level
 Plug 'psliwka/vim-smoothie' "Plugin for smooth scroll
 Plug 'machakann/vim-highlightedyank' "Plugin for highlighted yank
+Plug 'airblade/vim-gitgutter' "Git integration
 
 "Plugin for commenter
 Plug 'preservim/nerdcommenter'
