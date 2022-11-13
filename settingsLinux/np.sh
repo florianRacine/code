@@ -1,4 +1,4 @@
-cd "/home/evo/Documents/code/cpp"
+cd "$HOME/Documents/code/cpp"
 mkdir $1.dir
 cd $1.dir
 echo "/**" >> $1.cpp
