@@ -188,23 +188,19 @@ call plug#begin('~/.vim/plugged')
 Plug 'sirver/ultisnips'
 Plug 'honza/vim-snippets'
 
-"Plugin for highlighted yank
-Plug 'machakann/vim-highlightedyank'
-
 "Plugin for latex
 Plug 'lervag/vimtex'
 
 "Plugin for style
-Plug 'morhetz/gruvbox'
-Plug 'crusoexia/vim-monokai'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-
-" Plugin displaying thin vertical lines at each indentation level for code
-Plug 'Yggdroot/indentLine'
-
-"Plugin for smooth scroll
-Plug 'psliwka/vim-smoothie'
+Plug 'morhetz/gruvbox' "Colorscheme
+Plug 'crusoexia/vim-monokai' "Colorscheme
+Plug 'vim-airline/vim-airline' "Statusline
+Plug 'vim-airline/vim-airline-themes' "Statusline
+Plug 'junegunn/limelight.vim' "Dim other paragraph than the current one
+Plug 'luochen1990/rainbow' "Rainbow Bracket
+Plug 'Yggdroot/indentLine' "Displaying vertical lines at each indentation level
+Plug 'psliwka/vim-smoothie' "Plugin for smooth scroll
+Plug 'machakann/vim-highlightedyank' "Plugin for highlighted yank
 
 "Plugin for commenter
 Plug 'preservim/nerdcommenter'
@@ -234,6 +230,8 @@ let g:UltiSnipsJumpBackwardTrigger ='<s-tab>'
 
 let g:indentLine_fileType=[]
 let g:indentLine_char='│'
+
+let g:rainbow_active = 1
 
 call plug#end()
 ":PlugInstall
