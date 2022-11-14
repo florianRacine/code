@@ -214,6 +214,7 @@ Plug 'tpope/vim-repeat'
 
 "Plugin explorer
 Plug 'junegunn/fzf.vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 
 "==============================================================================
 " Configuration plugin 8
