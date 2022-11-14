@@ -9,8 +9,8 @@ window.onload = function() {
 
 function setGame() {
     board = [
-        [0, 0, 0, 0],
-        [0, 0, 0, 0],
+        [16, 8, 4, 2],
+        [0, 0, 64, 32],
         [0, 0, 0, 0],
         [0, 0, 0, 0]
     ]
@@ -22,7 +22,7 @@ function setGame() {
             tile.id = r.toString() + "-" + c.toString();
             let num = board[r][c];
             updateTile(tile, num);
-            document.getElementById("board").append("tile");
+            document.getElementById("board").append(tile);
         }
     }
 }
