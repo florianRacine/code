@@ -1,5 +1,5 @@
 #include <iostream>
-#include "game/Morpion.hpp"
+#include <game/Morpion.hpp>
 
 Morpion::Morpion() {
     for (int i = 0; i < 3; i++) {

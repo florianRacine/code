@@ -1,5 +1,10 @@
 #include <iostream>
-#include "player/PlayerReal.hpp"
+
+#include <game/Game.hpp>
+#include <game/Morpion.hpp>
+#include <player/Player.hpp>
+#include <player/PlayerReal.hpp>
+#include <player/PlayerIA.hpp>
 
 /*
  * __  __       _         ____                                      
@@ -11,16 +16,16 @@
  */
 
 int main() {
-    PlayerReal realPlayer1(1);
-    PlayerReal realPlayer2(2);
+    PlayerIA player1(1);
+    PlayerReal player2(2);
     Morpion morpion;
     bool isPlayer1ToPlay = true;
     while (morpion.terminalState() == false) {
         if (isPlayer1ToPlay) {
-            morpion = realPlayer1.move(morpion);
+            morpion = player1.move(morpion);
             isPlayer1ToPlay = false;
         } else {
-            morpion = realPlayer2.move(morpion);
+            morpion = player2.move(morpion);
             isPlayer1ToPlay = true;
         }
     }

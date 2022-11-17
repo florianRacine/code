@@ -1,4 +1,7 @@
-#include "game/Game.hpp"
+#ifndef MORPION_HPP
+#define MORPION_HPP
+
+#include <game/Game.hpp>
 
 class Morpion : public Game
 {
@@ -9,7 +12,9 @@ class Morpion : public Game
         bool terminalState();
         void celebrate();
         void outputGrid();
+        bool isPlayerWin(int idPlayer);
     private:
         int grid[3][3];
-        bool isPlayerWin(int idPlayer);
 };
+
+#endif

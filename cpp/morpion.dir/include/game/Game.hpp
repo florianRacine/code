@@ -1,3 +1,6 @@
+#ifndef GAME_HPP
+#define GAME_HPP
+
 class Game
 {
     public:
@@ -5,3 +8,4 @@ class Game
         virtual void celebrate()=0;
 };
 
+#endif

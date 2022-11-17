@@ -1,3 +1,6 @@
+#ifndef PLAYER_HPP
+#define PLAYER_HPP
+
 #include "game/Morpion.hpp"
 
 class Player
@@ -7,3 +10,5 @@ class Player
     private:
         int idPlayer;
 };
+
+#endif
