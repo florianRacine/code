@@ -3,6 +3,8 @@ var score = 0;
 var rows = 4;
 var columns = 4;
 
+let bestScore2048 = localStorage.getItem("bestScore2048");
+
 window.onload = function() {
     setGame();
 }
@@ -27,7 +29,26 @@ function setGame() {
     }
     setTwo();
     setTwo();
+    document.getElementById("bestScore2048").innerText = bestScore2048;
 
+}
+
+function terminalState() {
+    for (let r = 0; r < rows; r++) {
+        for (let c = 0; c < columns - 1; c++) {
+            if (board[r][c] == board[r][c+1] || board[r][c] == 0) {
+                return false;
+            }
+        }
+    }
+    for (let r = 0; r < rows - 1; r++) {
+        for (let c = 0; c < columns; c++) {
+            if (board[r][c] == board[r+1][c] || board[r][c] == 0) {
+                return false;
+            }
+        }
+    }
+    return true;
 }
 
 function hasEmptyTile() {
@@ -55,6 +76,7 @@ function setTwo() {
             tile.innerText = "2";
             tile.classList.add("x2");
             found = true;
+            score += 2;
         }
     }
 
@@ -77,30 +99,35 @@ function updateTile(tile, num) {
 document.addEventListener("keyup", (e) => {
     if (e.code == "ArrowLeft") {
         slideLeft();
-        if (!hasEmptyTile()) {
+        if (terminalState()) {
             alert("Game Over")
         } 
         setTwo();
     }else if (e.code == "ArrowRight") {
         slideRight();
-        if (!hasEmptyTile()) {
+        if (terminalState()) {
             alert("Game Over")
         }
         setTwo();
     } else if (e.code == "ArrowUp") {
         slideUp();
-        if (!hasEmptyTile()) {
+        if (terminalState()) {
             alert("Game Over")
         }
         setTwo();
     } else if (e.code == "ArrowDown") {
         slideDown();
-        if (!hasEmptyTile()) {
+        if (terminalState()) {
             alert("Game Over")
         }
         setTwo();
     }
+    if (score > bestScore2048) {
+        bestScore2048 = score;
+        localStorage.setItem("bestScore2048", score);
+    }
     document.getElementById("score").innerText = score;
+    document.getElementById("bestScore2048").innerText = bestScore2048;
 })
 
 function filterZero(row) {
@@ -113,7 +140,6 @@ function slide(row) {
         if (row[i] == row[i+1]) {
             row[i] *= 2;
             row[i+1] = 0;
-            score += row[i];
         }
     }
     row = filterZero(row);

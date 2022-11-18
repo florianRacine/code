@@ -22,6 +22,7 @@ var foodY;
 
 var gameOver = false;
 var score = 0;
+let bestScoreSnake = localStorage.getItem("bestScoreSnake");
 
 window.onload = function() {
     board = document.getElementById("board");
@@ -47,6 +48,10 @@ function update() {
     if (snakeX == foodX && snakeY == foodY) {
         snakeBody.push([foodX, foodY]);
         score++;
+        if (score > bestScoreSnake) {
+            bestScoreSnake = score;
+            localStorage.setItem("bestScoreSnake", score);
+        }
         placeFood();
     }
 
@@ -79,6 +84,8 @@ function update() {
         }
     }
     document.getElementById("score").innerText = score;
+    document.getElementById("bestScoreSnake").innerText = bestScoreSnake;
+    
 }
 
 function changeDirection(e) {
