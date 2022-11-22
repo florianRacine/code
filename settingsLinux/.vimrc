@@ -135,6 +135,8 @@ map Y y$
 
 map <space> <Leader>
 
+map <leader><tab> <c-6>
+
 map <leader>q :bp<bar>sp<bar>bn<bar>bd<CR>
 
 " Map <C-L> (redraw screen) to also turn off search highlighting until the
@@ -155,6 +157,12 @@ nnoremap <Leader>f <Esc>:Files<cr>
 
 inoremap <Leader>m <Esc>:Marks<cr>
 nnoremap <Leader>m <Esc>:Marks<cr>
+
+inoremap <Leader>n <CR> :!clear <CR> <Esc>:!bash $HOME/Documents/code/settingsLinux/noteTaker.sh<cr>
+nnoremap <Leader>n <CR> :!clear <CR> <Esc>:!bash $HOME/Documents/code/settingsLinux/noteTaker.sh<cr>
+
+"for_window [ title="notetaker_window" ] floating enable
+
 
 " Add new line without leaving the Normal mode
 
@@ -214,7 +222,6 @@ Plug 'tpope/vim-repeat'
 
 "Plugin explorer
 Plug 'junegunn/fzf.vim'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 
 "==============================================================================
 " Configuration plugin 8
