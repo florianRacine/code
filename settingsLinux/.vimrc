@@ -207,8 +207,6 @@ Plug 'crusoexia/vim-monokai' "Colorscheme
 Plug 'vim-airline/vim-airline' "Statusline
 Plug 'vim-airline/vim-airline-themes' "Statusline
 Plug 'junegunn/limelight.vim' "Dim other paragraph than the current one
-Plug 'luochen1990/rainbow' "Rainbow Bracket
-Plug 'Yggdroot/indentLine' "Displaying vertical lines at each indentation level
 Plug 'psliwka/vim-smoothie' "Plugin for smooth scroll
 Plug 'machakann/vim-highlightedyank' "Plugin for highlighted yank
 Plug 'airblade/vim-gitgutter' "Git integration
@@ -226,23 +224,11 @@ Plug 'junegunn/fzf.vim'
 "==============================================================================
 " Configuration plugin 8
 
-set conceallevel=1
 let g:highlightedyank_highlight_duration=80
-
-let g:tex_conceal='abdmg' 
-let g:tex_flavor='latex'
-
-let g:vimtex_view_method='general'
-let g:vimtex_quickfix_mode=0
 
 let g:UltiSnipsExpandTrigger ='<tab>'
 let g:UltiSnipsJumpForwardTrigger ='<tab>'
 let g:UltiSnipsJumpBackwardTrigger ='<s-tab>'
-
-let g:indentLine_fileType=[]
-let g:indentLine_char='│'
-
-let g:rainbow_active = 1
 
 call plug#end()
 ":PlugInstall
