@@ -199,7 +199,7 @@ Plug 'sirver/ultisnips'
 Plug 'honza/vim-snippets'
 
 "Plugin for latex
-Plug 'lervag/vimtex'
+"Plug 'lervag/vimtex'
 
 "Plugin for style
 Plug 'morhetz/gruvbox' "Colorscheme

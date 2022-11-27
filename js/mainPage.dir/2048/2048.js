@@ -16,7 +16,6 @@ function setGame() {
         [0, 0, 0, 0],
         [0, 0, 0, 0]
     ]
-
     for (let r = 0; r < rows; r++) {
         for (let c = 0; c < columns; c++) {
             //<div id="0-0"> </div>
@@ -79,7 +78,6 @@ function setTwo() {
             score += 2;
         }
     }
-
 }
 
 function updateTile(tile, num) {
@@ -197,11 +195,8 @@ function slideDown() {
         row.reverse();
         row = slide(row);
         row.reverse();
-        board[0][c] = row[0];
-        board[1][c] = row[1];
-        board[2][c] = row[2];
-        board[3][c] = row[3];
         for (let r = 0; r < rows; r++) {
+            board[r][c] = row[r];
             let tile = document.getElementById(r.toString() + "-" + c.toString());
             let num = board[r][c];
             updateTile(tile, num);
