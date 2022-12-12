@@ -1,6 +1,7 @@
 from PIL import Image
 import numpy as np
 import matplotlib.pyplot as plt
+from scipy.signal import find_peaks
 
 def lissage(Lx, Ly, p):
     Lxout=[]
@@ -18,7 +19,7 @@ gray = col.convert('L')
 
 weight, height = gray.size
 
-bw = gray.point(lambda x: 0 if x<70 else 255, '1')
+bw = gray.point(lambda x: 0 if x<80 else 255, '1')
 
 countCols = []
 
@@ -32,9 +33,21 @@ for x in range (weight):
 x = np.linspace(1, weight, weight)
 y = countCols
 
-x, y = lissage(x, y, 5)
+x, y = lissage(x, y, 10)
+
+countPiano = find_peaks(y, prominence=6)
+
+print(len(countPiano[0]))
+print(countPiano[0])
+
+bw.show()
+
+for v in countPiano[0]:
+    for i in range(height):
+        col.putpixel((v, i), (255, 0, 0))
+
 
 plt.plot(x, y)
 plt.show()
 
-bw.show()
+col.show()
