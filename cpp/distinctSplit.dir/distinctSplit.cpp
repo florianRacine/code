@@ -12,13 +12,12 @@ int main() {
         int n; 
         int curMaxA = 0, curMaxB = 0;
         int maxA, maxB;
-        unordered_map<char, int> mA, mB;
+        map<char, int> mA, mB;
         string s;
         cin >> n >> s;
         for (int i = 0; i < n; i++) {
-            if (!mB.count(s[i])  or mB[s[i]] == 0) {
+            if (mB[s[i]] == 0) {
                 curMaxB++;
-                mB[s[i]] = 0;
             }
             mB[s[i]]++;
         }
@@ -26,11 +25,10 @@ int main() {
         maxA = 0;
         for (int i = 0; i < n; i++) {
             mB[s[i]]--;
-            if (!mA.count(s[i]) or mA[s[i]] == 0) {
+            if (mA[s[i]] == 0) {
                 curMaxA++;
-                mA[s[i]] = 0;
             }
-            if (!mB.count(s[i]) or mB[s[i]] == 0) {
+            if (mB[s[i]] == 0) {
                 curMaxB--;
             }
             mA[s[i]]++;
@@ -39,7 +37,7 @@ int main() {
                 maxB = curMaxB;
             }
         }
-        cout << maxA + maxB << endl;
+        cout << maxA + maxB << "\n";
     }
     return 0;
 }
