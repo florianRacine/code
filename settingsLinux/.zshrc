@@ -1,7 +1,7 @@
 # Use powerline
 USE_POWERLINE="true"
 
-alias npcpp='bash /home/evo/Documents/code/cpp/np.sh'
+alias npcpp='bash $HOME/Documents/code/settingsLinux/np.sh'
 alias "c=xclip -selection clipboard"
 # alias "v=xclip -o"
 setxkbmap -option caps:escape
