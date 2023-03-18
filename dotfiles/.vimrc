@@ -158,8 +158,8 @@ nnoremap <Leader>f <Esc>:Files<cr>
 inoremap <Leader>m <Esc>:Marks<cr>
 nnoremap <Leader>m <Esc>:Marks<cr>
 
-inoremap <Leader>n <CR> :!clear <CR> <Esc>:!bash $HOME/Documents/code/settingsLinux/noteTaker.sh<cr>
-nnoremap <Leader>n <CR> :!clear <CR> <Esc>:!bash $HOME/Documents/code/settingsLinux/noteTaker.sh<cr>
+inoremap <Leader>n <CR> :!clear <CR> <Esc>:!bash $HOME/Documents/code/dotfiles/noteTaker.sh<cr>
+nnoremap <Leader>n <CR> :!clear <CR> <Esc>:!bash $HOME/Documents/code/dotfiles/noteTaker.sh<cr>
 
 "for_window [ title="notetaker_window" ] floating enable
 
