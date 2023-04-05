@@ -137,29 +137,20 @@ map <space> <Leader>
 
 map <leader><tab> <c-6>
 
-map <leader>q :bp<bar>sp<bar>bn<bar>bd<CR>
-
-" Map <C-L> (redraw screen) to also turn off search highlighting until the
-" next search
-nnoremap <C-L> :nohl<CR><C-L>
-
-" Open new file
-" With ex
-"inoremap <c-b> <Esc>:Lex<cr>:vertical resize 40<cr>
-"nnoremap <c-b> <Esc>:Lex<cr>:vertical resize 40<cr>
-
-" With fzf
-inoremap <Leader>b <Esc>:Buffers<cr>
-nnoremap <Leader>b <Esc>:Buffers<cr>
-
-inoremap <Leader>f <Esc>:Files<cr>
-nnoremap <Leader>f <Esc>:Files<cr>
-
-inoremap <Leader>m <Esc>:Marks<cr>
 nnoremap <Leader>m <Esc>:Marks<cr>
 
-inoremap <Leader>n <CR> :!clear <CR> <Esc>:!bash $HOME/Documents/code/scripts/noteTaker.sh<cr>
-nnoremap <Leader>n <CR> :!clear <CR> <Esc>:!bash $HOME/Documents/code/scripts/noteTaker.sh<cr>
+inoremap <Leader>n <CR> :!clear <CR> <Esc>:!bash $HOME/documents/code/scripts/noteTaker.sh<cr>
+nnoremap <Leader>n <CR> :!clear <CR> <Esc>:!bash $HOME/documents/code/scripts/noteTaker.sh<cr>
+
+"Move between split
+
+noremap <C-h> <C-w>h
+noremap <C-j> <C-w>j
+noremap <C-k> <C-w>k
+noremap <C-l> <C-w>l
+
+"cd vim into the directory of the current buffer.
+nnoremap <leader>cd :cd %:p:h<CR>
 
 "for_window [ title="notetaker_window" ] floating enable
 
@@ -180,14 +171,14 @@ noremap <F2> <ESC> :w <CR> :!clear <CR> :!python3 % <CR>
 inoremap <F2> <ESC> :w <CR> :!clear <CR>:!python3 % <CR>
 
 " C++
-noremap <F8> <ESC> :w <CR> :!clear <CR> :!g++ -fsanitize=address -std=c++17 -O2 -o %< % && ./%< < inp<CR>
-inoremap <F8> <ESC> :w <CR> :!clear <CR> :!g++ -fsanitize=address -std=c++17 -O2 -o "%<" "%" && "./%<" < inp<CR>
+noremap <F8> <ESC> :w <CR> :!clear <CR> :!g++ -fsanitize=address -std=c++17 -o %< % && ./%< <CR>
+inoremap <F9> <ESC> :w <CR> :!clear <CR> :!g++ -fsanitize=address -std=c++17 -o %< % && ./%< <CR>
 
 noremap <F9> <ESC> :w <CR> :!clear <CR> :!g++ -fsanitize=address -std=c++17 -Wall -Wextra -Wshadow -DONPC -O2 -o %< % && ./%< <CR>
-inoremap <F9> <ESC> :w <CR> :!clear <CR>:!g++ -fsanitize=address -std=c++17 -Wall -Wextra -Wshadow -DONPC -O2 -o %< % && ./%< <CR>
+inoremap <F9> <ESC> :w <CR> :!clear <CR> :!g++ -fsanitize=address -std=c++17 -Wall -Wextra -Wshadow -DONPC -O2 -o %< % && ./%< <CR>
  
-noremap <F10> <ESC> :w <CR> :!clear <CR> :!g++ -fsanitize=address -std=c++17 -Wall -Wextra -Wshadow -DONPC -O2 -o %< % && ./%< < inp<CR>
-inoremap <F10> <ESC> :w <CR> :!clear <CR>:!g++ -fsanitize=address -std=c++17 -Wall -Wextra -Wshadow -DONPC -O2 -o "%<" "%" && "./%<" < inp<CR>
+noremap <F10> <ESC> :w <CR> :!clear <CR> :!g++ -fsanitize=address -std=c++17 -Wall -Wextra -Wshadow -DONPC -O2 -o %< % && ./%< < inp <CR>
+inoremap <F10> <ESC> :w <CR> :!clear <CR> :!g++ -fsanitize=address -std=c++17 -Wall -Wextra -Wshadow -DONPC -O2 -o "%<" "%" && "./%<" < inp <CR>
 
 "==============================================================================
 " Plugin 7
@@ -219,6 +210,7 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 
 "Plugin explorer
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
 "==============================================================================
@@ -233,4 +225,8 @@ let g:UltiSnipsJumpBackwardTrigger ='<s-tab>'
 call plug#end()
 ":PlugInstall
 
-colorscheme monokai
+colorschem monokai
+
+hi Normal ctermbg=NONE
+highlight NonText ctermbg=NONE
+hi Normal guibg=NONE
