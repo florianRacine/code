@@ -29,3 +29,9 @@ cp $HOME/code/dotfiles/.bashrc $HOME/.bashrc
 cp $HOME/code/dotfiles/.zshrc $HOME/.zshrc
 [...]
 ```
+
+If you dont want to erase your config files you can define alias for scripts
+```bash
+alias npcpp='bash $HOME/Documents/code/scripts/np.sh'
+alias npcpp='bash $HOME/Documents/code/scripts/noteTaker.sh'
+```
