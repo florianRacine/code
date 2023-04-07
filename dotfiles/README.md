@@ -47,16 +47,19 @@ I recommend reading the docs of these plugins to understand them better. Each pl
 The [leader](http://learnvimscriptthehardway.stevelosh.com/chapters/06.html#leader) is `space`, so whenever you see `<leader>` it means `space`.
 
 Map Y to act like D and C, i.e. to yank until EOL, rather than act as yy, which is the default
+
 ```vimscript
 map Y y$
 ```
 
 Switch between buffer
+
 ```vimscript
 map <leader><tab> <c-6>
 ```
 
 Move between split with `ctrl` and `h`, `j`, `k`, `l`.
+
 ```vimscript
 noremap <C-h> <C-w>h
 noremap <C-j> <C-w>j
@@ -65,8 +68,22 @@ noremap <C-l> <C-w>l
 ```
 
 cd vim into the directory of the current buffer.
+
 ```vimscript
 nnoremap <leader>cd :cd %:p:h<CR>
+```
+
+Fzf mapping to manage buffers, marks and search for files.
+
+```vimscript
+inoremap <Leader>b <Esc>:Buffers<cr>
+nnoremap <Leader>b <Esc>:Buffers<cr>
+
+inoremap <Leader>f <Esc>:Files<cr>
+nnoremap <Leader>f <Esc>:Files<cr>
+
+inoremap <Leader>m <Esc>:Marks<cr>
+nnoremap <Leader>m <Esc>:Marks<cr>
 ```
 
 <h2> Installation : </h2>
