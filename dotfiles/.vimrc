@@ -91,9 +91,9 @@ if has('mouse')
 endif
 
 " Set the command window height to 2 lines, to avoid many cases of having to
-" "press <Enter> to continue"
+" press <Enter> to continue"
 set cmdheight=2
-set colorcolumn=85
+set colorcolumn=100
 set signcolumn=yes
 
 " Display line numbers on the left
@@ -204,12 +204,14 @@ Plug 'honza/vim-snippets'
 "Plugin for style
 Plug 'morhetz/gruvbox' "Colorscheme
 Plug 'crusoexia/vim-monokai' "Colorscheme
+Plug 'vim-scripts/tir_black' "Colorscheme
 Plug 'vim-airline/vim-airline' "Statusline
 Plug 'vim-airline/vim-airline-themes' "Statusline
 Plug 'junegunn/limelight.vim' "Dim other paragraph than the current one
 Plug 'psliwka/vim-smoothie' "Plugin for smooth scroll
 Plug 'machakann/vim-highlightedyank' "Plugin for highlighted yank
 Plug 'airblade/vim-gitgutter' "Git integration
+Plug 'nathanaelkane/vim-indent-guides' "Display indentation level
 
 "Plugin for commenter
 Plug 'preservim/nerdcommenter'
@@ -230,6 +232,13 @@ let g:highlightedyank_highlight_duration=80
 let g:UltiSnipsExpandTrigger ='<tab>'
 let g:UltiSnipsJumpForwardTrigger ='<tab>'
 let g:UltiSnipsJumpBackwardTrigger ='<s-tab>'
+
+let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_start_level = 2
+let g:indent_guides_guide_size = 1
+let g:indent_guides_auto_colors = 0
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=8
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=8
 
 call plug#end()
 ":PlugInstall
