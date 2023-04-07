@@ -49,19 +49,19 @@ The [leader](http://learnvimscriptthehardway.stevelosh.com/chapters/06.html#lead
 
 Map Y to act like D and C, i.e. to yank until EOL, rather than act as yy, which is the default
 
-```vimscript
+```vim
 map Y y$
 ```
 
 Switch between buffer
 
-```vimscript
+```vim
 map <leader><tab> <c-6>
 ```
 
 Move between split with `ctrl` and `h`, `j`, `k`, `l`.
 
-```vimscript
+```vim
 noremap <C-h> <C-w>h
 noremap <C-j> <C-w>j
 noremap <C-k> <C-w>k
@@ -70,13 +70,13 @@ noremap <C-l> <C-w>l
 
 cd vim into the directory of the current buffer.
 
-```vimscript
+```vim
 nnoremap <leader>cd :cd %:p:h<CR>
 ```
 
 Fzf mapping to manage buffers, marks and search for files.
 
-```vimscript
+```vim
 inoremap <Leader>b <Esc>:Buffers<cr>
 nnoremap <Leader>b <Esc>:Buffers<cr>
 
