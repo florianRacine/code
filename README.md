@@ -31,10 +31,12 @@ cp $HOME/code/dotfiles/.zshrc $HOME/.zshrc
 ```
 
 If you dont want to erase your config files you can define alias for scripts
+
 ```bash
 echo "alias npcpp='bash $HOME/Documents/code/scripts/np.sh'" >> $HOME/.bashrc
 ```
 Or for zsh :
+
 ```bash
 echo "alias npcpp='bash $HOME/Documents/code/scripts/np.sh'" >> $HOME/.zshrc
 ```
