@@ -6,9 +6,9 @@ Author : Florian RACINE
 
 Over the last 3 years, I have used and tweaked Vim. This configuration is my current vimrc !
 
-<h3> Some screenshots </h3>
+<h3> Screenshot </h3>
 
-![Screenshot_2023-04-06_23-35-28](https://user-images.githubusercontent.com/103432737/230498405-2a7ef287-8cae-4450-97b0-4907e619be3b.png)
+![screen to show  vimrc](https://user-images.githubusercontent.com/103432737/230635873-5b23a1cb-77ef-4e4d-8578-031609a08143.png)
 
 <h3> Included Plugins </h3>
 
@@ -28,6 +28,7 @@ I recommend reading the docs of these plugins to understand them better. Each pl
 * [vim-smoothie](https://github.com/psliwka/vim-smoothie): This (neo)vim plugin makes scrolling nice and smooth. Find yourself completely lost every time you press Ctrl-D or Ctrl-F?
 * [vim-highlightedyank](https://github.com/machakann/vim-highlightedyank): Make the yanked region apparent!
 * [vim-gitgutter](https://github.com/airblade/vim-gitgutter): A Vim plugin which shows a git diff in the sign column. It shows which lines have been added, modified, or removed.
+* [vim-indent-guides](https://github.com/preservim/vim-indent-guides): Indent Guides is a plugin for visually displaying indent levels in Vim.
 
 <h4> Commenter </h4>
 
@@ -48,19 +49,19 @@ The [leader](http://learnvimscriptthehardway.stevelosh.com/chapters/06.html#lead
 
 Map Y to act like D and C, i.e. to yank until EOL, rather than act as yy, which is the default
 
-```vimscript
+```vim
 map Y y$
 ```
 
 Switch between buffer
 
-```vimscript
+```vim
 map <leader><tab> <c-6>
 ```
 
 Move between split with `ctrl` and `h`, `j`, `k`, `l`.
 
-```vimscript
+```vim
 noremap <C-h> <C-w>h
 noremap <C-j> <C-w>j
 noremap <C-k> <C-w>k
@@ -69,13 +70,13 @@ noremap <C-l> <C-w>l
 
 cd vim into the directory of the current buffer.
 
-```vimscript
+```vim
 nnoremap <leader>cd :cd %:p:h<CR>
 ```
 
 Fzf mapping to manage buffers, marks and search for files.
 
-```vimscript
+```vim
 inoremap <Leader>b <Esc>:Buffers<cr>
 nnoremap <Leader>b <Esc>:Buffers<cr>
 
