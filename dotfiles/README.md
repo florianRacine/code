@@ -6,9 +6,9 @@ Author : Florian RACINE
 
 Over the last 3 years, I have used and tweaked Vim. This configuration is my current vimrc !
 
-<h3> Some screenshots </h3>
+<h3> Screenshot </h3>
 
-![Screenshot_2023-04-06_23-35-28](https://user-images.githubusercontent.com/103432737/230498405-2a7ef287-8cae-4450-97b0-4907e619be3b.png)
+![screen to show  vimrc](https://user-images.githubusercontent.com/103432737/230635873-5b23a1cb-77ef-4e4d-8578-031609a08143.png)
 
 <h3> Included Plugins </h3>
 
