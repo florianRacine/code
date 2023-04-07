@@ -137,8 +137,17 @@ map <space> <Leader>
 
 map <leader><tab> <c-6>
 
+" With fzf
+inoremap <Leader>b <Esc>:Buffers<cr>
+nnoremap <Leader>b <Esc>:Buffers<cr>
+
+inoremap <Leader>f <Esc>:Files<cr>
+nnoremap <Leader>f <Esc>:Files<cr>
+
+inoremap <Leader>m <Esc>:Marks<cr>
 nnoremap <Leader>m <Esc>:Marks<cr>
 
+"Taking notes
 inoremap <Leader>n <CR> :!clear <CR> <Esc>:!bash $HOME/documents/code/scripts/noteTaker.sh<cr>
 nnoremap <Leader>n <CR> :!clear <CR> <Esc>:!bash $HOME/documents/code/scripts/noteTaker.sh<cr>
 
