@@ -28,6 +28,7 @@ I recommend reading the docs of these plugins to understand them better. Each pl
 * [vim-smoothie](https://github.com/psliwka/vim-smoothie): This (neo)vim plugin makes scrolling nice and smooth. Find yourself completely lost every time you press Ctrl-D or Ctrl-F?
 * [vim-highlightedyank](https://github.com/machakann/vim-highlightedyank): Make the yanked region apparent!
 * [vim-gitgutter](https://github.com/airblade/vim-gitgutter): A Vim plugin which shows a git diff in the sign column. It shows which lines have been added, modified, or removed.
+* [vim-indent-guides](https://github.com/preservim/vim-indent-guides): Indent Guides is a plugin for visually displaying indent levels in Vim.
 
 <h4> Commenter </h4>
 
