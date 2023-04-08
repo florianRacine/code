@@ -4,10 +4,10 @@ Author: Florian RACINE
 
 <h2>What does this repository contain?</h2>
 
-🤝 My personal dotfiles for Linux
-🔭 Solutions to competitive programming problems
-🌱 Books that I use for programming
-👨‍ Linux scripts
+* 🤝 My personal dotfiles for Linux
+* 🔭 Solutions to competitive programming problems
+* 🌱 Books that I use for programming
+* 👨‍ Linux scripts
 
 <h2>Examples of vim configuration and a Linux script [np.sh]</h2>
 
