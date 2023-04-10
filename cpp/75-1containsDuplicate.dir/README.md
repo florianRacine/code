@@ -19,13 +19,31 @@ We can iterate through each pair of elements and check if they are equal.
 <h3> Solution </h3>
 
 First, we sort the list. Then we iterate through the list and check if two adjacent elements are equal.
-*If two adjacent elements are equal, return true.
-*If no adjacent elements are found to be equal, return false.
+
+* If two adjacent elements are equal, return true.
+* If no adjacent elements are found to be equal, return false.
 
 <h3> Complexity </h3>
 
 * Time : O(nlog(n))
 * Space : O(1)
+
+<h3> Implementation </h3>
+
+```cpp
+class Solution {
+public:
+    bool containsDuplicate(vector<int>& nums) {
+        sort(nums.begin(), nums.end());
+        for (int i = 0; i < (int)nums.size()-1; i++) {
+            if (nums[i] == nums[i+1]) {
+                return true;
+            }
+        }
+        return false;
+    }
+};
+```
 
 <h2> Hash map solution </h2>
 
@@ -40,3 +58,19 @@ We iterate through the list and add each element to a hash map. If an element ha
 
 * Time : O(n)
 * Space : O(n)
+
+<h3> Implementation </h3>
+
+```cpp
+class Solution {
+public:
+    bool containsDuplicate(vector<int>& nums) {
+        unordered_map<int, int> mp;
+        for (int i = 0; i < (int) nums.size(); i++) {
+            if (mp[nums[i]] != 0) return true;
+            mp[nums[i]]++;
+        }
+        return false;
+    }
+};
+```
