@@ -1,5 +1,11 @@
 <h1> Group Anagrams </h1>
 
+<h2> Problem </h2>
+
+Given an array of strings strs, group the anagrams together. You can return the answer in any order.
+
+An Anagram is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the original letters exactly once.
+
 <h2> Map solution </h2>
 
 <h3> Solution </h3>
