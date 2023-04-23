@@ -14,14 +14,37 @@ struct Tete
     struct Element* premier;
 };
 
+// Fonction pour calculer la taille d'une liste chaînée
+int taille_liste_chaine(struct Tete* tete) {
+    // Initialisation de la taille à 0
+    int taille = 0;
+    // Déclaration d'un pointeur "element" pour parcourir la liste chaînée à partir de son premier élément
+    struct Element* element = tete -> premier;
+    // Tant que "element" n'est pas NULL, on ajoute 1 à la taille et on passe à l'élément suivant
+    while (element != NULL) {
+        taille ++;
+        element = element -> suivant;
+    }
+    // On retourne la taille de la liste chaînée
+    return taille;
+}
+
 // fonction pour initialiser une nouvelle liste chaînée vide
 struct Tete* initialisation_liste_chaine() {
     // allouer de la mémoire pour un nouvel élément et initialiser sa valeur à 0
     struct Element* element = malloc(sizeof(*element));
+    if (element == NULL) {
+        printf("Erreur : impossible d'allouer de la mémoire pour l'élément\n");
+        exit(EXIT_FAILURE);
+    }
     element -> valeur = 0;
     element -> suivant = NULL;
     // allouer de la mémoire pour une nouvelle tête et la lier à l'élément initial
     struct Tete* tete = malloc(sizeof(*tete));
+    if (tete == NULL) {
+        printf("Erreur : impossible d'allouer de la mémoire pour la tête\n");
+        exit(EXIT_FAILURE);
+    }
     tete -> premier = element;
     return tete;
 }
@@ -30,6 +53,10 @@ struct Tete* initialisation_liste_chaine() {
 void insertion_debut_liste_chaine(struct Tete* tete, int nvValeur) {
     // allouer de la mémoire pour un nouvel élément et le lier à la tête
     struct Element* element = malloc(sizeof(*element));
+    if (element == NULL) {
+        printf("Erreur : impossible d'allouer de la mémoire pour l'élément\n");
+        exit(EXIT_FAILURE);
+    }
     element -> valeur = nvValeur;
     element -> suivant = tete -> premier;
     tete -> premier = element;
@@ -38,6 +65,14 @@ void insertion_debut_liste_chaine(struct Tete* tete, int nvValeur) {
 
 // fonction pour insérer un nouvel élément au milieu de la liste chaînée (après l'élément i)
 void insertion_milieu_liste_chaine(struct Tete* tete, int i, int nvValeur) {
+    if (i < 0) {
+        printf("Erreur : l'indice doit être supérieur ou égal à 0\n");
+        return ;
+    }
+    if (i > taille_liste_chaine(tete)) {
+        printf("Erreur : l'indice est supérieur à la taille de la liste\n");
+        return ;
+    }
     // parcourir la liste jusqu'à l'élément i
     struct Element* element = tete -> premier;
     int j = 0;
@@ -48,6 +83,10 @@ void insertion_milieu_liste_chaine(struct Tete* tete, int i, int nvValeur) {
     // insérer le nouvel élément après l'élément i
     struct Element* tmp = element -> suivant;
     struct Element* nvElement = malloc(sizeof(*nvElement));
+    if (nvElement == NULL) {
+        printf("Erreur : impossible d'allouer de la mémoire pour l'élément\n");
+        exit(EXIT_FAILURE);
+    }
     element -> suivant = nvElement;
     nvElement -> suivant = tmp;
     nvElement -> valeur = nvValeur;
@@ -56,6 +95,10 @@ void insertion_milieu_liste_chaine(struct Tete* tete, int i, int nvValeur) {
 
 // fonction pour supprimer le premier élément de la liste chaînée
 void supprimer_debut_liste_chaine(struct Tete* tete) {
+    if (tete -> premier == NULL) {
+        printf("Erreur : la liste est vide\n");
+        return ;
+    }
     // déplacer la tête pour pointer sur le deuxième élément et libérer la mémoire du premier
     struct Element* element = tete -> premier;
     tete -> premier = element -> suivant;
@@ -65,6 +108,10 @@ void supprimer_debut_liste_chaine(struct Tete* tete) {
 
 // fonction pour supprimer un élément au milieu de la liste chaînée (l'élément i)
 void supprimer_milieu_liste_chaine(struct Tete* tete, int i) {
+    if (i < 0) {
+        printf("Erreur : l'indice doit être supérieur ou égal à 0\n");
+        return ;
+    }
     // parcourir la liste jusqu'à l'élément i-1
     struct Element* element = tete -> premier;
     int j = 0;
@@ -81,6 +128,10 @@ void supprimer_milieu_liste_chaine(struct Tete* tete, int i) {
 
 // Fonction pour afficher les éléments d'une liste chaînée
 void afficher_liste_chaine(struct Tete* tete) {
+    if (tete == NULL || tete->premier == NULL) {
+        printf("La liste est vide.\n");
+        return;
+    }
     // Déclaration d'un pointeur "element" pour parcourir la liste chaînée à partir de son premier élément
     struct Element* element = tete -> premier;
     // Tant que "element" n'est pas NULL, on affiche sa valeur et on ajoute une flèche si l'élément suivant existe
@@ -95,23 +146,12 @@ void afficher_liste_chaine(struct Tete* tete) {
     return ;
 }
 
-// Fonction pour calculer la taille d'une liste chaînée
-int taille_liste_chaine(struct Tete* tete) {
-    // Initialisation de la taille à 0
-    int taille = 0;
-    // Déclaration d'un pointeur "element" pour parcourir la liste chaînée à partir de son premier élément
-    struct Element* element = tete -> premier;
-    // Tant que "element" n'est pas NULL, on ajoute 1 à la taille et on passe à l'élément suivant
-    while (element != NULL) {
-        taille ++;
-        element = element -> suivant;
-    }
-    // On retourne la taille de la liste chaînée
-    return taille;
-}
-
 // Fonction pour libérer l'espace mémoire occupé par une liste chaînée
 void destruction_liste_chaine(struct Tete* tete) {
+    if (tete == NULL) {
+        printf("La liste est déjà vide.\n");
+        return;
+    }
     // Déclaration d'un pointeur "element" pour parcourir la liste chaînée à partir de son premier élément
     struct Element* element = tete -> premier;
     // Déclaration d'un pointeur "old_element" pour stocker l'élément précédent à "element"
@@ -129,6 +169,10 @@ void destruction_liste_chaine(struct Tete* tete) {
 
 // Fonction pour inverser l'ordre des éléments d'une liste chaînée
 void inverser_liste_chaine(struct Tete* tete) {
+    if (tete == NULL || tete->premier == NULL || tete->premier->suivant == NULL) {
+        printf("La liste est trop courte pour être inversée.\n");
+        return;
+    }
     // Déclaration de deux pointeurs "prev_element" et "element" pour inverser les liens entre les éléments de la liste chaînée
     struct Element* prev_element = tete -> premier;
     struct Element* element = prev_element -> suivant;
@@ -147,20 +191,5 @@ void inverser_liste_chaine(struct Tete* tete) {
 }
 
 int main () {
-    struct Tete* tete = initialisation_liste_chaine();
-    insertion_debut_liste_chaine(tete, 5);
-    insertion_debut_liste_chaine(tete, 4);
-    insertion_debut_liste_chaine(tete, 3);
-    insertion_debut_liste_chaine(tete, 2);
-    insertion_debut_liste_chaine(tete, 1);
-    afficher_liste_chaine(tete);
-    insertion_milieu_liste_chaine(tete, 2, 10);
-    afficher_liste_chaine(tete);
-    supprimer_milieu_liste_chaine(tete, 2);
-    afficher_liste_chaine(tete);
-    printf("%d \n", taille_liste_chaine(tete));
-    inverser_liste_chaine(tete);
-    afficher_liste_chaine(tete);
-    destruction_liste_chaine(tete);
-    return 0;
+
 }
