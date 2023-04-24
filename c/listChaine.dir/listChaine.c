@@ -1,18 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-
-// structure pour stocker un élément de la liste chaînée
-struct Element
-{
-    int valeur;
-    struct Element* suivant;
-};
-
-// structure pour stocker la tête de la liste chaînée
-struct Tete
-{
-    struct Element* premier;
-};
+#include "headers.h"
 
 // Fonction pour calculer la taille d'une liste chaînée
 int taille_liste_chaine(struct Tete* tete) {
@@ -188,8 +176,4 @@ void inverser_liste_chaine(struct Tete* tete) {
         element = tmp_element;
     }
     return ;
-}
-
-int main () {
-
 }
