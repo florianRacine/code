@@ -137,6 +137,9 @@ map <space> <Leader>
 
 map <leader><tab> <c-6>
 
+nmap ghn <Plug>(GitGutterNextHunk)
+nmap ghp <Plug>(GitGutterPrevHunk)
+
 " With fzf
 inoremap <Leader>b <Esc>:Buffers<cr>
 nnoremap <Leader>b <Esc>:Buffers<cr>
