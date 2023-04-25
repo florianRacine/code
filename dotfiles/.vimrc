@@ -197,6 +197,9 @@ inoremap <F10> <ESC> :w <CR> :!clear <CR> :!g++ -fsanitize=address -std=c++17 -W
 
 call plug#begin('~/.vim/plugged')
 
+"Plugin for linting
+Plug 'dense-analysis/ale'
+
 "Plugin for autocompletion
 Plug 'sirver/ultisnips'
 Plug 'honza/vim-snippets'
@@ -240,6 +243,10 @@ let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_start_level = 2
 let g:indent_guides_guide_size = 1
 let g:indent_guides_auto_colors = 0
+
+let g:ale_sign_error = 'E'
+let g:ale_sign_warning = 'W'
+
 autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=8
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=8
 
