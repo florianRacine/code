@@ -85,11 +85,6 @@ set visualbell
 " is unset, this does nothing.
 set t_vb=
 
-" Enable use of the mouse for all modes
-if has('mouse')
-  set mouse=a
-endif
-
 " Set the command window height to 2 lines, to avoid many cases of having to
 " press <Enter> to continue"
 set cmdheight=2
@@ -137,8 +132,8 @@ map <space> <Leader>
 
 map <leader><tab> <c-6>
 
-nmap ghn <Plug>(GitGutterNextHunk)
-nmap ghp <Plug>(GitGutterPrevHunk)
+nmap gn <Plug>(GitGutterNextHunk)
+nmap gp <Plug>(GitGutterPrevHunk)
 
 " With fzf
 inoremap <Leader>b <Esc>:Buffers<cr>
@@ -210,6 +205,7 @@ Plug 'honza/vim-snippets'
 "Plugin for style
 Plug 'morhetz/gruvbox' "Colorscheme
 Plug 'crusoexia/vim-monokai' "Colorscheme
+Plug 'sainnhe/everforest' "Colorscheme
 Plug 'vim-scripts/tir_black' "Colorscheme
 Plug 'vim-airline/vim-airline' "Statusline
 Plug 'vim-airline/vim-airline-themes' "Statusline
