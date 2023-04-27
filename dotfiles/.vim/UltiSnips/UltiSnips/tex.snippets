@@ -1,0 +1,159 @@
+snippet template "Basic template" b
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+\documentclass[14pt, a4paper]{extarticle}
+
+\usepackage[french]{babel}
+\usepackage{float} % Required for including images
+\usepackage{datetime}
+\usepackage{geometry} %Required for changing the size of the marge
+\usepackage[utf8]{inputenc} % Required for inputting international characters
+\usepackage[T1]{fontenc} % Output font encoding for international characters
+\usepackage{graphicx} % Required for including images
+\usepackage{listings} % Required for insertion of code
+\usepackage{enumerate} % To modify the enumerate environment
+\usepackage{xcolor} % Required to add color in text
+\usepackage{titling} % Easy access to assignement information
+\usepackage{tabularx}
+\usepackage{eso-pic}
+\usepackage{caption}
+\usepackage{subcaption}
+\captionsetup{compatibility=false}
+\usepackage{wallpaper}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
+
+%----------------------------------------------------------------------------------------
+%	DEFINE SYNTAX COLOR TO OUTPUT CODE
+%----------------------------------------------------------------------------------------
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.95}
+
+\lstdefinestyle{mystyle}{
+backgroundcolor=\color{backcolour},   
+commentstyle=\color{codegreen},
+keywordstyle=\color{magenta},
+numberstyle=\tiny\color{codegray},
+stringstyle=\color{codepurple},
+basicstyle=\ttfamily\footnotesize,
+breakatwhitespace=false,         
+breaklines=true,                 
+captionpos=b,                    
+keepspaces=true,                 
+numbers=left,                    
+numbersep=5pt,                  
+showspaces=false,                
+showstringspaces=false,
+showtabs=false,                  
+tabsize=2
+}
+\lstset{style=mystyle}
+
+%----------------------------------------------------------------------------------------
+%	ASSIGNMENT INFORMATION
+%----------------------------------------------------------------------------------------
+\author{RACINE Florian}
+\title{$1}
+\geometry{hmargin=2cm,vmargin=3cm}
+\pagestyle{fancy}
+
+\fancyhead{}
+\fancyfoot{}
+\fancyhead[L]{\textbf{\thepage} \; Chapitre \leftmark}
+
+%----------------------------------------------------------------------------------------
+%	DEFINE COMMANDS
+%----------------------------------------------------------------------------------------
+\renewcommand{\contentsname}{Table des matières}
+\renewcommand{\listfigurename}{Liste des figures}
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+\begin{document}
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+\maketitle % Output the assignment title, created automatically using the information in the custom commands above
+\vspace*{\stretch{1}}
+\begin{center}
+\HRule \\\\[0.4cm]
+{ \huge \bfseries \thetitle \\\\[0.4cm] }
+\HRule \\\\[2cm]
+\graphicspath{{/home/evo/Pictures/logo/}}
+\includegraphics[width = 7cm]{logo}
+\end{center}
+\vspace*{\stretch{1}}
+\newpage
+
+%----------------------------------------------------------------------------------------
+%	TABLE OF CONTENTS
+%----------------------------------------------------------------------------------------
+\tableofcontents
+\newpage
+
+\graphicspath{{image/}} % Changing the path to include image
+
+%----------------------------------------------------------------------------------------
+%	SECTION 1
+%----------------------------------------------------------------------------------------
+\section{$2}
+
+$0
+
+\end{document}
+endsnippet
+
+snippet beg "begin{} / end{}" bA
+\\begin{$1}
+	$0
+\\end{$1}
+endsnippet
+
+priority 100
+snippet ... "ldots" iA
+\ldots
+endsnippet
+
+snippet fig "Figure environment" b
+\begin{figure}[${1:htpb}]
+	\centering
+	${2:\includegraphics[width=0.8\textwidth]{$3}}
+	\caption{${4:$3}}
+	\label{fig:${5:${3/\W+/-/g}}}
+\end{figure}
+endsnippet
+
+snippet enum "Enumerate" bA
+\begin{enumerate}
+	\item $0
+\end{enumerate}
+endsnippet
+
+snippet item "Itemize" bA
+\begin{itemize}
+	\item $0
+\end{itemize}
+endsnippet
+
+snippet section "Section"
+%----------------------------------------------------------------------------------------
+%	SECTION $1
+%----------------------------------------------------------------------------------------
+\newpage
+\section{$2}
+$0
+endsnippet
+
+snippet nl "NewLine"
+\newline
+endsnippet
