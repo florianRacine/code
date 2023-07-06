@@ -1,0 +1,75 @@
+echo -e "\E[32m Run setup script \E[0m"
+
+echo -e "\E[32m Update system START \E[0m"
+apt update
+
+echo -e "\E[32m Upgrade system START \E[0m"
+apt upgrade
+
+echo -e "\E[32m Install vim START \E[0m"
+apt install vim
+apt install gvim
+
+echo -e "\E[32m Install fzf START \E[0m"
+apt install fzf
+
+echo -e "\E[32m Install xclip START \E[0m"
+apt install xclip
+
+echo -e "\E[32m Install git START \E[0m"
+apt install git
+
+echo -e "\E[32m Install figlet START \E[0m"
+apt install figlet
+
+echo -e "\E[32m Install chromium START \E[0m"
+apt install chromium
+
+echo -e "\E[32m Install terminator START \E[0m"
+apt install terminator
+
+echo -e "\E[32m Install toilet START \E[0m"
+apt install toilet
+
+echo -e "\E[32m Install boxes START \E[0m"
+apt install boxes
+
+echo -e "\E[32m Install lolcat START \E[0m"
+apt install lolcat
+
+echo -e "\E[32m Start clone repository \E[0m"
+
+echo -e "\E[32m Change dir to Document \E[0m"
+cd $HOME/Documents
+
+echo -e "\E[32m Clone code START \E[0m"
+git clone "https://github.com/florianRacine/code.git"
+
+echo -e "\E[32m Import DotFiles \E[0m"
+
+echo -e "\E[32m Cp .vimrc \E[0m"
+cp $HOME/Documents/code/dotfiles/.vimrc $HOME/.vimrc
+
+echo -e "\E[32m Cp .bashrc \E[0m"
+cp $HOME/Documents/code/dotfiles/.bashrc $HOME/.bashrc
+
+echo -e "\E[32m Cp .zshrc \E[0m"
+cp $HOME/Documents/code/dotfiles/.zshrc $HOME/.zshrc
+
+echo -e "\E[32m Cp .vim \E[0m"
+cp -r $HOME/Documents/code/dotfiles/.vim $HOME/.vim
+
+echo -e "\E[32m Cp config terminator \E[0m"
+cp $HOME/Documents/code/dotfiles/.terminator $HOME/.config/terminator/config
+
+echo -e "\E[32m Install VimPlug START \E[0m"
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+echo -e "\E[32m Install background Terminal START \E[0m"
+cd $HOME/Documents
+curl -O "https://fracine.perso.centrale-marseille.fr/bgTerminal.png"
+
+echo -e "\E[32m END setup script \E[0m"
+
+toilet -f ivrit 'Giga CHAD is on !' | boxes -d cat -a hc -p h8 | lolcat

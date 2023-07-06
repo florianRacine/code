@@ -1,0 +1,28 @@
+[global_config]
+  window_state = maximise
+  title_transmit_bg_color = "#000000"
+  title_receive_bg_color = "#000000"
+  title_inactive_bg_color = "#000000"
+[keybindings]
+  help = KP_Enter
+[profiles]
+  [[default]]
+    background_color = "#1f2021"
+    background_darkness = 0.7
+    background_type = image
+    cursor_color = "#aaaaaa"
+    foreground_color = "#d8d8d8"
+    show_titlebar = False
+    scrollback_infinite = True
+    palette = "#000000:#cc0000:#4e9a06:#c4a000:#3465a4:#75507b:#06989a:#d3d7cf:#272727:#ef2929:#8ae234:#fce94f:#729fcf:#ad7fa8:#34e2e2:#eeeeec"
+    bold_is_bright = True
+    background_image = /home/evo/Documents/bgTerminal.png
+[layouts]
+  [[default]]
+    [[[window0]]]
+      type = Window
+      parent = ""
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+[plugins]
