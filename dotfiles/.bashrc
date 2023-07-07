@@ -137,3 +137,7 @@ ex ()
   fi
 }
 set -o vi
+
+alias c="xclip -selection clipboard"
+alias v="xclip -o"
+alias fd="cd \$(find . -type d -print | fzf)"
