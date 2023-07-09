@@ -1,75 +1,138 @@
-echo -e "\E[32m Run setup script \E[0m"
+#!/bin/bash
 
-echo -e "\E[32m Update system START \E[0m"
-apt update
+# =================================================================
+# ======================   VARIABLES   ============================
+# =================================================================
 
-echo -e "\E[32m Upgrade system START \E[0m"
-apt upgrade
+# Path variables
+documents_dir="$HOME/Documents"
+dotfiles_dir="$documents_dir/code/dotfiles"
 
-echo -e "\E[32m Install vim START \E[0m"
-apt install vim
-apt install gvim
+# Packages to install
+packages=(
+    "vim"
+    "gvim" 
+    "tmux" 
+    "fzf" 
+    "xclip" 
+    "git" 
+    "chromium" 
+    "terminator" 
+    "filezilla"
+    "vlc"
+    "tree" 
+    "figlet" 
+    "toilet" 
+    "boxes" 
+    "lolcat" 
+    "python3"
+    "python3-pip"
+    "texlive"
+    "texlive-latex-extra"
+    "texlive-lang-french"
+)
 
-echo -e "\E[32m Install fzf START \E[0m"
-apt install fzf
+# Colors
+GREEN="\e[32m"
+RED="\e[31m"
+RESET="\e[0m"
 
-echo -e "\E[32m Install xclip START \E[0m"
-apt install xclip
 
-echo -e "\E[32m Install git START \E[0m"
-apt install git
 
-echo -e "\E[32m Install figlet START \E[0m"
-apt install figlet
 
-echo -e "\E[32m Install chromium START \E[0m"
-apt install chromium
 
-echo -e "\E[32m Install terminator START \E[0m"
-apt install terminator
+# =================================================================
+# ======================   FUNCTIONS   ============================
+# =================================================================
 
-echo -e "\E[32m Install toilet START \E[0m"
-apt install toilet
+# Function to display colored log messages
+log() {
+    echo -e "${GREEN}$1${RESET}"
+}
 
-echo -e "\E[32m Install boxes START \E[0m"
-apt install boxes
+# Function to display colored error messages
+error() {
+    echo -e "${RED}$1${RESET}"
+}
 
-echo -e "\E[32m Install lolcat START \E[0m"
-apt install lolcat
+# Function to copy a file or directory
+copy_file() {
+    source_file="$1"
+    target_file="$2"
+    if [ -e "$source_file" ]; then
+        cp -r "$source_file" "$target_file" || error "Failed to copy $source_file"
+    else
+        error "File not found: $source_file"
+    fi
+}
 
-echo -e "\E[32m Start clone repository \E[0m"
 
-echo -e "\E[32m Change dir to Document \E[0m"
-cd $HOME/Documents
 
-echo -e "\E[32m Clone code START \E[0m"
-git clone "https://github.com/florianRacine/code.git"
 
-echo -e "\E[32m Import DotFiles \E[0m"
 
-echo -e "\E[32m Cp .vimrc \E[0m"
-cp $HOME/Documents/code/dotfiles/.vimrc $HOME/.vimrc
+# =================================================================
+# ========================   MAIN   ===============================
+# =================================================================
 
-echo -e "\E[32m Cp .bashrc \E[0m"
-cp $HOME/Documents/code/dotfiles/.bashrc $HOME/.bashrc
+# Update system
+log "Update system START"
+apt update || error "Update system failed"
+log "Update system END"
 
-echo -e "\E[32m Cp .zshrc \E[0m"
-cp $HOME/Documents/code/dotfiles/.zshrc $HOME/.zshrc
+# Upgrade system
+log "Upgrade system START"
+apt upgrade || error "Upgrade system failed"
+log "Upgrade system END"
 
-echo -e "\E[32m Cp .vim \E[0m"
-cp -r $HOME/Documents/code/dotfiles/.vim $HOME/.vim
+# Install packages
+log "Install packages START"
+for package in "${packages[@]}"; do
+    if ! dpkg-query -W -f='${Status}' "$package" | grep -q "install ok installed"; then
+        log "Install $package START"
+        apt install "$package" -y || error "Failed to install $package"
+        log "Install $package END"
+    else
+        log "$package is already installed"
+    fi
+done
+log "Install packages END"
 
-echo -e "\E[32m Cp config terminator \E[0m"
-cp $HOME/Documents/code/dotfiles/.terminator $HOME/.config/terminator/config
+# Clone repository
+log "Start cloning repository"
+log "Change dir to Documents"
+cd "$documents_dir"
+log "Clone repo: code START"
+if [ -d "$documents_dir/code" ]; then
+    (
+        cd "$documents_dir/code"
+        git pull origin master || error "Failed to update repository: code"
+    )
+else
+    git clone "https://github.com/florianRacine/code.git" || error "Failed to clone repository: code"
+fi
+log "Clone repo: code END"
 
-echo -e "\E[32m Install VimPlug START \E[0m"
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+# Import DotFiles
+log "Import DotFiles"
+copy_file "$dotfiles_dir/.vimrc" "$HOME/.vimrc"
+copy_file "$dotfiles_dir/.bashrc" "$HOME/.bashrc"
+copy_file "$dotfiles_dir/.zshrc" "$HOME/.zshrc"
+copy_file "$dotfiles_dir/.vim" "$HOME/.vim"
+copy_file "$dotfiles_dir/.terminator" "$HOME/.config/terminator/config"
 
-echo -e "\E[32m Install background Terminal START \E[0m"
-cd $HOME/Documents
-curl -O "https://fracine.perso.centrale-marseille.fr/bgTerminal.png"
+# Install VimPlug
+log "Install VimPlug START"
+curl -fLo "$HOME/.vim/autoload/plug.vim" --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim || error "Failed to install VimPlug"
+log "Install VimPlug END"
 
-echo -e "\E[32m END setup script \E[0m"
+# Download background Terminal
+log "Install background Terminal START"
+cd "$documents_dir"
+curl -O "https://fracine.perso.centrale-marseille.fr/bgTerminal.png" || error "Failed to download background Terminal"
+log "Install background Terminal END"
 
+log "END setup script"
+
+# Display custom message
 toilet -f ivrit 'Giga CHAD is on !' | boxes -d cat -a hc -p h8 | lolcat
