@@ -105,7 +105,7 @@ log "Clone repo: code START"
 if [ -d "$documents_dir/code" ]; then
     (
         cd "$documents_dir/code"
-        git pull origin master || error "Failed to update repository: code"
+        git pull origin main || error "Failed to update repository: code"
     )
 else
     git clone "https://github.com/florianRacine/code.git" || error "Failed to clone repository: code"
