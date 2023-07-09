@@ -11,7 +11,7 @@ dotfiles_dir="$documents_dir/code/dotfiles"
 # Packages to install
 packages=(
     "vim"
-    "gvim" 
+    "vim-gtk" 
     "tmux" 
     "fzf" 
     "xclip" 
