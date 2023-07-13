@@ -159,12 +159,10 @@ noremap <C-l> <C-w>l
 "cd vim into the directory of the current buffer.
 nnoremap <leader>cd :cd %:p:h<CR>
 
-"for_window [ title="notetaker_window" ] floating enable
+"Remap to move in the quick fix list
+nmap [q <Plug>(qf_qf_next)
+nmap ]q <Plug>(qf_qf_previous)
 
-
-" Add new line without leaving the Normal mode
-
-" imap jk <Esc>
 
 "==============================================================================
 " Short cut 6
@@ -214,6 +212,9 @@ Plug 'psliwka/vim-smoothie' "Plugin for smooth scroll
 Plug 'machakann/vim-highlightedyank' "Plugin for highlighted yank
 Plug 'airblade/vim-gitgutter' "Git integration
 Plug 'nathanaelkane/vim-indent-guides' "Display indentation level
+
+"Pluging to extend built-in
+Plug 'romainl/vim-qf'
 
 "Plugin for commenter
 Plug 'preservim/nerdcommenter'
