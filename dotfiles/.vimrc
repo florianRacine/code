@@ -159,9 +159,15 @@ noremap <C-l> <C-w>l
 "cd vim into the directory of the current buffer.
 nnoremap <leader>cd :cd %:p:h<CR>
 
-"Remap to move in the quick fix list
+"Move in the quick fix list
 nmap [q <Plug>(qf_qf_next)
 nmap ]q <Plug>(qf_qf_previous)
+
+"Open netrw
+nnoremap <leader>dd :Lexplore %:p:h<CR>
+nnoremap <Leader>da :Lexplore<CR>
+
+
 
 
 "==============================================================================
@@ -243,6 +249,11 @@ let g:indent_guides_auto_colors = 0
 
 let g:ale_sign_error = 'E'
 let g:ale_sign_warning = 'W'
+
+let g:netrw_keepdir = 0
+let g:netrw_winsize = 15
+let g:netrw_banner = 0
+let g:netrw_localcopydircmd = 'cp -r'
 
 autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=8
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=8
