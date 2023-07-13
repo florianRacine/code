@@ -112,6 +112,7 @@ shopt -s expand_aliases
 # Enable history appending instead of overwriting.  #139609
 shopt -s histappend
 
+shopt -s direxpand
 #
 # # ex - archive extractor
 # # usage: ex <file>
@@ -136,6 +137,7 @@ ex ()
     echo "'$1' is not a valid file"
   fi
 }
+
 set -o vi
 
 alias c="xclip -selection clipboard"
