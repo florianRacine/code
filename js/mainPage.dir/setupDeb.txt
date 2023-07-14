@@ -12,6 +12,7 @@ dotfiles_dir="$documents_dir/code/dotfiles"
 packages=(
     "vim"
     "vim-gtk" 
+    "bat"
     "tmux" 
     "fzf" 
     "xclip" 

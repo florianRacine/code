@@ -146,8 +146,8 @@ inoremap <Leader>m <Esc>:Marks<cr>
 nnoremap <Leader>m <Esc>:Marks<cr>
 
 "Taking notes
-inoremap <Leader>n <CR> :!clear <CR> <Esc>:!bash $HOME/documents/code/scripts/noteTaker.sh<cr>
-nnoremap <Leader>n <CR> :!clear <CR> <Esc>:!bash $HOME/documents/code/scripts/noteTaker.sh<cr>
+inoremap <Leader>n <CR> :!clear <CR> <Esc>:!bash $HOME/Documents/code/scripts/noteTaker.sh<cr>
+nnoremap <Leader>n <CR> :!clear <CR> <Esc>:!bash $HOME/Documents/code/scripts/noteTaker.sh<cr>
 
 "Move between split
 
@@ -168,6 +168,13 @@ nnoremap <leader>dd :Lexplore %:p:h<CR>
 nnoremap <Leader>da :Lexplore<CR>
 
 
+"Open netrw
+nnoremap <tab> :bnext<CR>
+nnoremap <tab> :bnext<CR>
+
+"Open netrw
+nnoremap <S-tab> :bprev<CR>
+nnoremap <S-tab> :bprev<CR>
 
 
 "==============================================================================
