@@ -13,6 +13,7 @@ packages=(
     "vim"
     "vim-gtk" 
     "bat"
+    "ripgrep"
     "tmux" 
     "fzf" 
     "xclip" 
