@@ -145,6 +145,9 @@ nnoremap <Leader>f <Esc>:Files<cr>
 inoremap <Leader>m <Esc>:Marks<cr>
 nnoremap <Leader>m <Esc>:Marks<cr>
 
+inoremap <Leader>r <Esc>:Rg<cr>
+nnoremap <Leader>r <Esc>:Rg<cr>
+
 "Taking notes
 inoremap <Leader>n <CR> :!clear <CR> <Esc>:!bash $HOME/Documents/code/scripts/noteTaker.sh<cr>
 nnoremap <Leader>n <CR> :!clear <CR> <Esc>:!bash $HOME/Documents/code/scripts/noteTaker.sh<cr>
@@ -239,6 +242,9 @@ Plug 'tpope/vim-repeat'
 "Plugin explorer
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+
+"Plugin Vim/Tmux
+Plug 'christoomey/vim-tmux-navigator'
 
 "==============================================================================
 " Configuration plugin 8
