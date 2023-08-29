@@ -120,6 +120,7 @@ copy_file "$dotfiles_dir/.vimrc" "$HOME/.vimrc"
 copy_file "$dotfiles_dir/.bashrc" "$HOME/.bashrc"
 copy_file "$dotfiles_dir/.zshrc" "$HOME/.zshrc"
 copy_file "$dotfiles_dir/.vim" "$HOME/.vim"
+copy_file "$dotfiles_dir/.tmux.conf" "$HOME/.tmux.conf"
 mkdir "$HOME/.config/terminator"
 copy_file "$dotfiles_dir/.terminator" "$HOME/.config/terminator/config"
 
