@@ -124,19 +124,25 @@ copy_file "$dotfiles_dir/.tmux.conf" "$HOME/.tmux.conf"
 mkdir "$HOME/.config/terminator"
 copy_file "$dotfiles_dir/.terminator" "$HOME/.config/terminator/config"
 
+cd "$documents_dir"
+
 # Install VimPlug
 log "Install VimPlug START"
 curl -fLo "$HOME/.vim/autoload/plug.vim" --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim || error "Failed to install VimPlug"
 log "Install VimPlug END"
 
+# Install VimPlug
+log "Install Tmux Plugin Manager START"
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm  || error "Failed to clone repository: tpm"
+log "Install Tmux Plugin Manager END"
+
 # Download background Terminal
 log "Install background Terminal START"
-cd "$documents_dir"
 curl -O "https://fracine.perso.centrale-marseille.fr/bgTerminal.png" || error "Failed to download background Terminal"
 log "Install background Terminal END"
 
-log "END setup script"
-
 # Display custom message
 toilet -f ivrit 'Giga CHAD is on !' | boxes -d cat -a hc -p h8 | lolcat
+
+log "END setup script"
