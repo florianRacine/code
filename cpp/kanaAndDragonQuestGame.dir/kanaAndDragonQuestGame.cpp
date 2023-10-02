@@ -3,9 +3,9 @@
  *    created: 02.10.2023 23:15:36
 **/
 #include <bits/stdc++.h>
-
+ 
 using namespace std;
-
+ 
 int main() {
     int tt; cin >> tt;
     while (tt--) {
