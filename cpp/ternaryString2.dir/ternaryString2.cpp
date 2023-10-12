@@ -20,10 +20,8 @@ int main() {
                 occ[s[right]] ++;
                 right ++;
             }
-            while (left < right) {
-                if ((occ['1'] != 0 && occ['2'] != 0) && occ['3'] != 0) {
-                    ans = min(ans, right - left);
-                }
+            while (occ['1'] != 0 && occ['2'] != 0 && occ['3'] != 0) {
+                ans = min(ans, right - left);
                 occ[s[left]] --;
                 left ++;
             }
