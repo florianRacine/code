@@ -14,6 +14,14 @@ int main() {
         for (int i = 0; i < n; i++) {
             cin >> a[i];
         }
+        int ans = n - 1;
+        while (ans > 0 && a[ans] <= a[ans - 1]) {
+            ans --;
+        }
+        while (ans > 0 && a[ans] >= a[ans - 1]) {
+            ans --;
+        }
+        cout << ans << endl;
     }
     return 0;
 }
