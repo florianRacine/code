@@ -152,11 +152,11 @@ nnoremap <Leader>r <Esc>:Rg<cr>
 inoremap <Leader>n <CR> :!clear <CR> <Esc>:!bash $HOME/Documents/code/scripts/noteTaker.sh<cr>
 nnoremap <Leader>n <CR> :!clear <CR> <Esc>:!bash $HOME/Documents/code/scripts/noteTaker.sh<cr>
 
-"Move between split
-noremap <C-h> <C-w>h
-noremap <C-j> <C-w>j
-noremap <C-k> <C-w>k
-noremap <C-l> <C-w>l
+" Copy and paste to system clipboard
+vmap <Leader>y "+y
+vmap <Leader>d "+d
+vmap <Leader>p "+p
+nmap <Leader>p "+p
 
 "Move between split
 
