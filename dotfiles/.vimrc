@@ -185,6 +185,8 @@ nnoremap <tab> :bnext<CR>
 nnoremap <S-tab> :bprev<CR>
 nnoremap <S-tab> :bprev<CR>
 
+inoremap \ \\
+
 
 "==============================================================================
 " Short cut 6
