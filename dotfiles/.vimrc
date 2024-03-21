@@ -128,6 +128,7 @@ set completeopt=menuone,noinsert,noselect
 " which is the default
 map Y y$
 
+let mapleader="œ"
 map <space> <Leader>
 
 map <leader><tab> <c-6>
@@ -184,9 +185,6 @@ nnoremap <tab> :bnext<CR>
 "Open netrw
 nnoremap <S-tab> :bprev<CR>
 nnoremap <S-tab> :bprev<CR>
-
-inoremap \ \\
-
 
 "==============================================================================
 " Short cut 6
