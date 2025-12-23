@@ -25,4 +25,4 @@ echo "}" >> $1.cpp
 xclip -selection clipboard -o >> inp
 
 # Open vim with split
-vim -O +10 -c 'startinsert!' $1.cpp inp -c ":vertical resize 120"
+vim -O +12 -c 'startinsert!' $1.cpp inp -c ":vertical resize 120"
